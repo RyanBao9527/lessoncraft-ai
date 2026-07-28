@@ -29,6 +29,10 @@ Course Blueprint 是唯一事实来源。教案是老师 2～3 分钟内可看�
   SlideDeck 完成后依据 source_step_ids、activity_ids、code_example_id 自动填充。
 - 课堂流程用于表格展示，字段必须紧凑，不写逐页讲解内容。
 - 完整代码不进入 stages；由导出器在代码附件中每个示例只展示一次。
+- terminology.term 是首选标准词；可以自然使用 Blueprint 声明的 aliases，但不得创造
+  未声明的同义词或改变定义。
+- homework 逐字使用 delivery_mode 为 student_assignment 或 extension_challenge 的
+  Exercise.question；不得加入 in_class 或 teacher_optional，也不得自行改写题目。
 
 输出前自检：教案可快速浏览、字段不过长、时间拆分与总和一致、学生操作没有冲突、
 不重复 PPT 或 speaker notes。

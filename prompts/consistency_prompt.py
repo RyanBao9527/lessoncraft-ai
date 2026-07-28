@@ -19,18 +19,30 @@ Course Blueprint 是唯一事实来源。
 教案字段是否过长、逐页提示是否变成逐字稿、课堂流程表时间与页码是否正确。
 
 必须额外检查：
-- knowledge_scope.required / excluded 是否被遵守；
+- knowledge_scope.required / mentioned_only / excluded 是否被遵守；每个正式 KnowledgePoint
+  是否映射 required，范围判断是否考虑 terminology.aliases；
+- 术语标准词或已声明 alias 是否至少出现一种，是否误用了未声明同义词；
 - student_action、input_variations、forbidden_actions 与派生内容是否一致；
 - 每个 STEP 的三类子时间是否等于 total_minutes，全部 STEP 是否等于课程总时长；
 - 同一 STEP 的 PPT 备注时间是否超过 presentation_minutes；
 - step_bindings、activity_ids、code_example_ids 与实际页面是否一致；
 - Slide.objective_ids 是否为来源 STEP.objective_ids 的子集；
-- exercise.delivery_mode、display_on_slide 与 PPT/教案交付方式是否一致；
+- exercise.delivery_mode、display_on_slide 与 PPT/教案交付方式是否一致；教师追加题不得
+  进入学生 PPT 或 homework，学生作业/拓展挑战必须在 PPT 与 homework 明确交付；
 - 教案页码是否由 SlideDeck 实际映射得出。
 
 fail：核心代码变化、目标缺失、Blueprint 外知识、练习答案冲突、课程总时间错误或页面顺序破坏。
 warning：授课操作差异、页码映射错误、投屏时间超预算、来源 ID 非法或作业交付不明确。
 全部事实与授课执行层统一时才返回 pass。
+
+checks 只能使用并完整返回以下 22 个 name，不得新增名称：
+objective_coverage、knowledge_coverage、knowledge_scope、teaching_order、
+duration_total、step_duration_breakdown、presentation_time_budget、
+terminology_consistency、code_example_consistency、lesson_slide_mapping、
+activity_slide_binding、slide_objective_subset、student_action_consistency、
+exercise_objective_mapping、exercise_delivery、unknown_slide_knowledge、
+unknown_lesson_content、slide_interaction_rhythm、slide_text_only_run、
+slide_information_load、lesson_plan_conciseness、speaker_notes_conciseness。
 
 禁止提供新课程方案，禁止输出 Markdown。只返回符合 JSON Schema 的结构化报告。
 输出前自检每个问题是否指出了具体 ID。

@@ -74,7 +74,7 @@ flowchart LR
 CourseBlueprint
 ├── course                 课程基本信息、时长、页数上限
 ├── knowledge_scope        required / mentioned_only / excluded 教学边界
-├── terminology            标准术语与统一定义
+├── terminology            标准术语、aliases 与统一定义
 ├── learning_objectives    可观察、可评估目标（OBJ-*）
 ├── knowledge_points       知识点与常见错误（K-*）
 ├── lesson_flow            有序课堂流程（STEP-*）
@@ -117,11 +117,17 @@ CourseBlueprint
 - 单页信息量、教案字段长度与逐页提示长度
 - 教案流程表页码是否与 PPT 实际来源页一致
 - required / excluded 知识范围
+- required / mentioned_only / excluded 强约束与术语 alias 匹配
 - 结构化学生操作与 forbidden_actions
 - STEP 子时间、课程总时间和 PPT 讲解预算
 - 活动、代码与实际 slide_ids 绑定
 - Slide 目标是否为来源 STEP 目标的子集
 - 练习 delivery_mode 与学生 PPT 展示方式
+- 练习交付矩阵与教案 homework 的确定性同步
+
+一致性报告固定保留上述 22 个检查名。真实模型的语义复核结果会合并回对应检查，
+不会额外创建第 23 项；`knowledge_scope`、`terminology_consistency` 和
+`exercise_delivery` 以确定性检查结果为最终权威，避免 alias 或交付方式产生假警告。
 
 ## 7. 技术栈
 

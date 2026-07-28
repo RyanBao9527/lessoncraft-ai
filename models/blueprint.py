@@ -6,6 +6,13 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
+from utils.terminology import (
+    any_term_in,
+    build_alias_groups,
+    normalize_term,
+    variants_for,
+)
+
 ID_PATTERNS = {
     "objective": r"^OBJ-\d{2}$",
     "knowledge": r"^K-\d{2}$",
@@ -36,7 +43,16 @@ class CourseMeta(StrictModel):
 
 class TerminologyItem(StrictModel):
     term: str = Field(min_length=1)
+    aliases: list[str] = Field(default_factory=list, max_length=8)
     standard_definition: str = Field(min_length=2)
+
+    @model_validator(mode="after")
+    def keep_aliases_unique(self) -> "TerminologyItem":
+        values = [self.term, *self.aliases]
+        normalized = [normalize_term(item) for item in values]
+        if len(normalized) != len(set(normalized)):
+            raise ValueError(f"术语“{self.term}”的 aliases 不可重复")
+        return self
 
 
 class LearningObjective(StrictModel):
@@ -63,10 +79,14 @@ class KnowledgeScope(StrictModel):
     @model_validator(mode="after")
     def keep_scope_disjoint(self) -> "KnowledgeScope":
         groups = {
-            "required": set(self.required),
-            "mentioned_only": set(self.mentioned_only),
-            "excluded": set(self.excluded),
+            "required": {normalize_term(item) for item in self.required},
+            "mentioned_only": {
+                normalize_term(item) for item in self.mentioned_only
+            },
+            "excluded": {normalize_term(item) for item in self.excluded},
         }
+        if not groups["required"]:
+            raise ValueError("knowledge_scope.required 至少包含一个正式教学知识点")
         if groups["required"] & groups["mentioned_only"]:
             raise ValueError("required 与 mentioned_only 不可重复")
         if groups["required"] & groups["excluded"]:
@@ -182,6 +202,20 @@ class Exercise(StrictModel):
     ] = "in_class"
     display_on_slide: bool = False
 
+    @model_validator(mode="after")
+    def validate_delivery_contract(self) -> "Exercise":
+        if self.delivery_mode == "teacher_optional" and self.display_on_slide:
+            raise ValueError("teacher_optional 练习不得在学生 PPT 展示")
+        if (
+            self.delivery_mode
+            in {"student_assignment", "extension_challenge"}
+            and not self.display_on_slide
+        ):
+            raise ValueError(
+                "student_assignment 和 extension_challenge 必须在学生 PPT 展示"
+            )
+        return self
+
 
 class CourseBlueprint(StrictModel):
     """Canonical course definition from which all deliverables derive."""
@@ -196,6 +230,30 @@ class CourseBlueprint(StrictModel):
     activities: list[Activity] = Field(default_factory=list)
     exercises: list[Exercise] = Field(default_factory=list)
     revision_notes: list[str] = Field(default_factory=list)
+
+    @model_validator(mode="before")
+    @classmethod
+    def migrate_missing_scope(cls, data: object) -> object:
+        """Infer a conservative required scope for legacy Blueprint JSON."""
+
+        if not isinstance(data, dict):
+            return data
+        scope = data.get("knowledge_scope")
+        if isinstance(scope, dict) and scope.get("required"):
+            return data
+        migrated = dict(data)
+        existing_scope = scope if isinstance(scope, dict) else {}
+        required = [
+            item.get("name", "")
+            for item in migrated.get("knowledge_points", [])
+            if isinstance(item, dict) and item.get("name")
+        ]
+        migrated["knowledge_scope"] = {
+            "required": required,
+            "mentioned_only": existing_scope.get("mentioned_only", []),
+            "excluded": existing_scope.get("excluded", []),
+        }
+        return migrated
 
     @model_validator(mode="after")
     def validate_ids_and_references(self) -> CourseBlueprint:
@@ -239,4 +297,112 @@ class CourseBlueprint(StrictModel):
             unknown_codes = set(item.code_example_ids) - code_ids
             if unknown_codes:
                 raise ValueError(f"{item.id} 引用了不存在的代码: {sorted(unknown_codes)}")
+
+        alias_groups = build_alias_groups(
+            (item.term, item.aliases) for item in self.terminology
+        )
+        owner_by_variant: dict[str, str] = {}
+        for item in self.terminology:
+            for value in [item.term, *item.aliases]:
+                key = normalize_term(value)
+                owner = owner_by_variant.get(key)
+                if owner and owner != item.term:
+                    raise ValueError(
+                        f"术语 alias“{value}”同时属于“{owner}”和“{item.term}”"
+                    )
+                owner_by_variant[key] = item.term
+
+        scope_groups = {
+            name: {
+                normalize_term(variant)
+                for term in values
+                for variant in variants_for(term, alias_groups)
+            }
+            for name, values in {
+                "required": self.knowledge_scope.required,
+                "mentioned_only": self.knowledge_scope.mentioned_only,
+                "excluded": self.knowledge_scope.excluded,
+            }.items()
+        }
+        if scope_groups["required"] & scope_groups["mentioned_only"]:
+            raise ValueError("required 与 mentioned_only 的 alias 不可重复")
+        if scope_groups["required"] & scope_groups["excluded"]:
+            raise ValueError("required 与 excluded 的 alias 不可重复")
+        if scope_groups["mentioned_only"] & scope_groups["excluded"]:
+            raise ValueError("mentioned_only 与 excluded 的 alias 不可重复")
+
+        formal_core = "\n".join(
+            [
+                *(
+                    f"{item.term}\n{item.standard_definition}"
+                    for item in self.terminology
+                ),
+                *(
+                    f"{item.content}\n{item.assessment}"
+                    for item in self.learning_objectives
+                ),
+                *(
+                    f"{item.name}\n{item.definition}\n"
+                    + "\n".join(item.common_errors)
+                    for item in self.knowledge_points
+                ),
+                *(
+                    f"{item.title}\n{item.teacher_activity}\n"
+                    f"{item.student_activity}\n{item.key_question}"
+                    for item in self.lesson_flow
+                ),
+                *(
+                    f"{item.title}\n{item.code}\n{item.explanation}"
+                    for item in self.code_examples
+                ),
+                *(f"{item.title}\n{item.instructions}" for item in self.activities),
+                *(f"{item.question}\n{item.answer}" for item in self.exercises),
+            ]
+        )
+        restricted_mentioned = "\n".join(
+            [
+                *(
+                    f"{item.term}\n{item.standard_definition}"
+                    for item in self.terminology
+                ),
+                *(
+                    f"{item.content}\n{item.assessment}"
+                    for item in self.learning_objectives
+                ),
+                *(
+                    f"{item.name}\n{item.definition}\n"
+                    + "\n".join(item.common_errors)
+                    for item in self.knowledge_points
+                ),
+                *(
+                    f"{item.title}\n{item.code}\n{item.explanation}"
+                    for item in self.code_examples
+                ),
+                *(f"{item.title}\n{item.instructions}" for item in self.activities),
+                *(f"{item.question}\n{item.answer}" for item in self.exercises),
+            ]
+        )
+        for term in self.knowledge_scope.excluded:
+            if any_term_in(formal_core, variants_for(term, alias_groups)):
+                raise ValueError(f"excluded 知识点“{term}”出现在正式教学内容")
+        for term in self.knowledge_scope.mentioned_only:
+            if any_term_in(
+                restricted_mentioned,
+                variants_for(term, alias_groups),
+            ):
+                raise ValueError(
+                    f"mentioned_only 知识点“{term}”被提升为正式教学内容"
+                )
+        for term in self.knowledge_scope.required:
+            if not any_term_in(formal_core, variants_for(term, alias_groups)):
+                raise ValueError(f"required 知识点“{term}”没有正式教学内容")
+        for item in self.knowledge_points:
+            text = f"{item.name}\n{item.definition}"
+            if not any(
+                any_term_in(text, variants_for(term, alias_groups))
+                for term in self.knowledge_scope.required
+            ):
+                raise ValueError(
+                    f"{item.id} 未映射到 knowledge_scope.required"
+                )
         return self

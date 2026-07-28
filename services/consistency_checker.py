@@ -9,6 +9,11 @@ from models.consistency import CheckResult, ConsistencyReport, ConsistencySummar
 from models.lesson_plan import LessonPlan
 from models.slide_deck import SlideDeck
 from utils.validators import duration_delta, objective_coverage
+from utils.terminology import (
+    any_term_in,
+    build_alias_groups,
+    variants_for,
+)
 
 
 class ConsistencyChecker:
@@ -128,12 +133,45 @@ class ConsistencyChecker:
         """Reject formal teaching of concepts explicitly excluded by Blueprint."""
 
         scope = blueprint.knowledge_scope
-        corpus = "\n".join(
+        alias_groups = build_alias_groups(
+            (item.term, item.aliases) for item in blueprint.terminology
+        )
+        core_formal = "\n".join(
             [
-                *(item.definition for item in blueprint.knowledge_points),
-                *(item.teacher_activity for item in blueprint.lesson_flow),
-                *(item.student_activity for item in blueprint.lesson_flow),
-                *(item.code for item in blueprint.code_examples),
+                *(
+                    f"{item.term}\n{item.standard_definition}"
+                    for item in blueprint.terminology
+                ),
+                *(
+                    f"{item.content}\n{item.assessment}"
+                    for item in blueprint.learning_objectives
+                ),
+                *(
+                    f"{item.name}\n{item.definition}\n"
+                    + "\n".join(item.common_errors)
+                    for item in blueprint.knowledge_points
+                ),
+                *(
+                    f"{item.title}\n{item.teacher_activity}\n"
+                    f"{item.student_activity}\n{item.key_question}"
+                    for item in blueprint.lesson_flow
+                ),
+                *(
+                    f"{item.title}\n{item.code}\n{item.explanation}"
+                    for item in blueprint.code_examples
+                ),
+                *(
+                    f"{item.title}\n{item.instructions}"
+                    for item in blueprint.activities
+                ),
+                *(
+                    f"{item.question}\n{item.answer}"
+                    for item in blueprint.exercises
+                ),
+            ]
+        )
+        derived_formal = "\n".join(
+            [
                 *lesson_plan.key_points,
                 *lesson_plan.difficult_points,
                 *(
@@ -158,15 +196,65 @@ class ConsistencyChecker:
                 ),
             ]
         )
+        restricted_mentioned = "\n".join(
+            [
+                *(
+                    f"{item.term}\n{item.standard_definition}"
+                    for item in blueprint.terminology
+                ),
+                *(
+                    f"{item.content}\n{item.assessment}"
+                    for item in blueprint.learning_objectives
+                ),
+                *(
+                    f"{item.name}\n{item.definition}\n"
+                    + "\n".join(item.common_errors)
+                    for item in blueprint.knowledge_points
+                ),
+                *(
+                    f"{item.title}\n{item.code}\n{item.explanation}"
+                    for item in blueprint.code_examples
+                ),
+                *(
+                    f"{item.title}\n{item.instructions}"
+                    for item in blueprint.activities
+                ),
+                *(
+                    f"{item.question}\n{item.answer}"
+                    for item in blueprint.exercises
+                ),
+            ]
+        )
         issues: list[str] = []
         for term in scope.excluded:
-            pattern = rf"(?<![A-Za-z0-9_]){re.escape(term)}(?![A-Za-z0-9_])"
-            if re.search(pattern, corpus, flags=re.IGNORECASE):
+            if any_term_in(
+                f"{core_formal}\n{derived_formal}",
+                variants_for(term, alias_groups),
+            ):
                 issues.append(f"排除知识点“{term}”被作为正式教学内容使用")
+        for term in scope.mentioned_only:
+            if any_term_in(
+                restricted_mentioned,
+                variants_for(term, alias_groups),
+            ):
+                issues.append(
+                    f"仅提及知识点“{term}”被提升为目标、知识点、代码、活动或练习"
+                )
         for term in scope.required:
-            pattern = rf"(?<![A-Za-z0-9_]){re.escape(term)}(?![A-Za-z0-9_])"
-            if not re.search(pattern, corpus, flags=re.IGNORECASE):
+            if not any_term_in(
+                core_formal,
+                variants_for(term, alias_groups),
+            ):
                 issues.append(f"必教知识点“{term}”未出现在教学包")
+        for item in blueprint.knowledge_points:
+            text = f"{item.name}\n{item.definition}"
+            if not any(
+                any_term_in(text, variants_for(term, alias_groups))
+                for term in scope.required
+            ):
+                issues.append(
+                    f"{item.id} 未映射到 knowledge_scope.required"
+                )
         return self._result("knowledge_scope", issues)
 
     def _order(
@@ -262,14 +350,11 @@ class ConsistencyChecker:
         lesson_plan: LessonPlan,
         slide_deck: SlideDeck,
     ) -> CheckResult:
-        package_text = (
-            lesson_plan.model_dump_json()
-            + slide_deck.model_dump_json()
-        )
+        package_text = lesson_plan.model_dump_json() + slide_deck.model_dump_json()
         issues = [
-            f"术语“{item.term}”未出现在教案或 PPT 中"
+            f"术语“{item.term}”及其 aliases 未出现在教案或 PPT 中"
             for item in blueprint.terminology
-            if item.term not in package_text
+            if not any_term_in(package_text, [item.term, *item.aliases])
         ]
         return self._result(
             "terminology_consistency",
@@ -527,20 +612,75 @@ class ConsistencyChecker:
             issues.append(f"PPT 引用了不存在的练习 {unknown}")
         for exercise in blueprint.exercises:
             on_slide = exercise.id in slide_refs
+            visibly_present = any(
+                any(
+                    exercise.question in value
+                    or value in exercise.question
+                    for value in slide.content
+                    if value
+                )
+                for slide in slide_deck.slides
+            )
             if exercise.display_on_slide != on_slide:
                 expected = "应展示" if exercise.display_on_slide else "不应展示"
                 issues.append(f"{exercise.id} {expected}，但 PPT 标记不一致")
+            if not exercise.display_on_slide and visibly_present:
+                issues.append(
+                    f"{exercise.id} 标记为不展示，但题目出现在学生 PPT"
+                )
             if (
-                exercise.delivery_mode == "teacher_optional"
+                exercise.delivery_mode
+                in {"teacher_optional", "in_class"}
                 and exercise.question in lesson_plan.homework
             ):
-                issues.append(f"{exercise.id} 是教师追加练习，不应列为正式课后任务")
+                issues.append(
+                    f"{exercise.id} 不是课后交付，不应列为正式课后任务"
+                )
             if (
                 exercise.delivery_mode
                 in {"student_assignment", "extension_challenge"}
                 and exercise.question not in lesson_plan.homework
             ):
                 issues.append(f"{exercise.id} 应在教案课后任务中明确标记")
+            if (
+                exercise.delivery_mode == "teacher_optional"
+                and exercise.display_on_slide
+            ):
+                issues.append(
+                    f"{exercise.id} 是教师追加练习，不得在学生 PPT 展示"
+                )
+            if (
+                exercise.delivery_mode
+                in {"student_assignment", "extension_challenge"}
+                and not exercise.display_on_slide
+            ):
+                issues.append(
+                    f"{exercise.id} 是学生交付任务，必须在 PPT 展示"
+                )
+            bound_slides = [
+                slide
+                for slide in slide_deck.slides
+                if exercise.id in slide.exercise_ids
+            ]
+            if exercise.display_on_slide and bound_slides and not any(
+                any(
+                    exercise.question in value
+                    or value in exercise.question
+                    for value in slide.content
+                    if value
+                )
+                for slide in bound_slides
+            ):
+                issues.append(
+                    f"{exercise.id} 已绑定页面，但原练习题未显示在学生可见内容"
+                )
+            for slide in slide_deck.slides:
+                if exercise.id not in slide.exercise_ids:
+                    continue
+                if not set(exercise.objective_ids) & set(slide.objective_ids):
+                    issues.append(
+                        f"{exercise.id} 被绑定到目标不匹配的页面 {slide.id}"
+                    )
         return self._result(
             "exercise_delivery",
             issues,

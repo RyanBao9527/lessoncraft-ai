@@ -28,14 +28,25 @@
   "terminology": [
     {
       "term": "while 循环",
+      "aliases": [
+        "while"
+      ],
       "standard_definition": "while 循环会在条件为 True 时重复执行一组代码。"
     },
     {
       "term": "循环条件",
+      "aliases": [
+        "while 条件",
+        "循环判断条件"
+      ],
       "standard_definition": "循环条件决定循环是否继续执行，每次循环前都会重新判断。"
     },
     {
       "term": "循环变量",
+      "aliases": [
+        "循环控制变量",
+        "循环状态变量"
+      ],
       "standard_definition": "循环变量是在循环过程中被更新、并帮助循环最终停止的变量。"
     }
   ],

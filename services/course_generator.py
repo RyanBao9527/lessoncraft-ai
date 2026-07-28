@@ -121,9 +121,119 @@ def normalize_slide_deck_sources(
                         reason="Slide.knowledge_ids 必须来自来源 STEP",
                     )
                 )
+    _normalize_exercise_delivery(blueprint, normalized)
     normalized.source_repairs = repairs
     normalized.step_bindings = build_step_bindings(blueprint, normalized)
     return normalized
+
+
+def _normalize_exercise_delivery(
+    blueprint: CourseBlueprint, slide_deck: SlideDeck
+) -> None:
+    """Bind only student-visible exercises to suitable pages deterministically."""
+
+    exercises = {item.id: item for item in blueprint.exercises}
+    hidden_questions = [
+        item.question
+        for item in blueprint.exercises
+        if not item.display_on_slide
+    ]
+    for slide in slide_deck.slides:
+        slide.exercise_ids = list(
+            dict.fromkeys(
+                exercise_id
+                for exercise_id in slide.exercise_ids
+                if exercise_id in exercises
+                and exercises[exercise_id].display_on_slide
+                and (
+                    not slide.objective_ids
+                    or bool(
+                        set(exercises[exercise_id].objective_ids)
+                        & set(slide.objective_ids)
+                    )
+                )
+            )
+        )
+        slide.content = [
+            value
+            for value in slide.content
+            if not any(
+                question in value or value in question
+                for question in hidden_questions
+                if value
+            )
+        ]
+
+    visible_ids = {
+        exercise_id
+        for slide in slide_deck.slides
+        for exercise_id in slide.exercise_ids
+    }
+    preferred_layouts = {
+        "student_assignment": {"assignment", "homework"},
+        "extension_challenge": {"assignment", "homework"},
+        "in_class": {"exercise", "activity", "question"},
+    }
+    for exercise in blueprint.exercises:
+        if not exercise.display_on_slide or exercise.id in visible_ids:
+            continue
+        objective_candidates = [
+            slide
+            for slide in slide_deck.slides
+            if set(exercise.objective_ids) & set(slide.objective_ids)
+        ]
+        preferred = [
+            slide
+            for slide in objective_candidates
+            if slide.layout in preferred_layouts.get(
+                exercise.delivery_mode, set()
+            )
+        ]
+        target = (
+            preferred[-1]
+            if preferred
+            else (
+                objective_candidates[-1]
+                if objective_candidates
+                else slide_deck.slides[-1]
+            )
+        )
+        target.exercise_ids.append(exercise.id)
+        if not any(
+            exercise.question in value
+            or value in exercise.question
+            for value in target.content
+            if value
+        ):
+            target.content = [
+                _shorten(exercise.question, 120),
+                *target.content,
+            ][:5]
+        visible_ids.add(exercise.id)
+
+    for exercise in blueprint.exercises:
+        if not exercise.display_on_slide:
+            continue
+        bound_slides = [
+            slide
+            for slide in slide_deck.slides
+            if exercise.id in slide.exercise_ids
+        ]
+        if not bound_slides or any(
+            any(
+                exercise.question in value
+                or value in exercise.question
+                for value in slide.content
+                if value
+            )
+            for slide in bound_slides
+        ):
+            continue
+        target = bound_slides[-1]
+        target.content = [
+            _shorten(exercise.question, 120),
+            *target.content,
+        ][:5]
 
 
 def sync_lesson_slide_ids(
@@ -159,6 +269,13 @@ def sync_lesson_slide_ids(
             )
             if source.student_action:
                 stage.student_activity = source.student_action.action
+    if blueprint is not None:
+        synced.homework = [
+            item.question
+            for item in blueprint.exercises
+            if item.delivery_mode
+            in {"student_assignment", "extension_challenge"}
+        ]
     return synced
 
 
@@ -246,8 +363,7 @@ def derive_lesson_plan(
             item.question
             for item in blueprint.exercises
             if item.delivery_mode in {"student_assignment", "extension_challenge"}
-        ][:2]
-        or ["在课堂作品基础上增加一次输入校验，并说明修改原因。"],
+        ][:2],
         teacher_reminders=[
             "先让学生预测结果，再运行代码验证。",
             "只使用 Blueprint 中定义的术语与示例代码。",
@@ -726,7 +842,7 @@ def derive_slide_deck(blueprint: CourseBlueprint) -> SlideDeck:
             and item.delivery_mode
             in {"student_assignment", "extension_challenge"}
         ),
-        blueprint.exercises[-1] if blueprint.exercises else None,
+        None,
     )
     challenge = (
         challenge_exercise.question
@@ -784,6 +900,7 @@ def derive_slide_deck(blueprint: CourseBlueprint) -> SlideDeck:
         slide.id = f"SLIDE-{index:02d}"
     _fit_slide_times_to_step_budgets(blueprint, slides)
     deck = SlideDeck(title=blueprint.course.title, slides=slides)
+    _normalize_exercise_delivery(blueprint, deck)
     deck.step_bindings = build_step_bindings(blueprint, deck)
     return deck
 
@@ -825,7 +942,7 @@ class CourseGenerator:
         lesson_plan: LessonPlan,
         slide_deck: SlideDeck,
     ) -> ConsistencyReport:
-        """Combine deterministic hard checks with a read-only semantic review."""
+        """Merge semantic evidence into the fixed 22 deterministic checks."""
 
         local_report = ConsistencyChecker().check(blueprint, lesson_plan, slide_deck)
         if local_report.status == "fail":
@@ -835,20 +952,48 @@ class CourseGenerator:
             consistency_user_prompt(blueprint, lesson_plan, slide_deck),
         )
         semantic_report = ConsistencyReport.model_validate(semantic_data)
-        semantic_checks = []
-        local_names = {item.name for item in local_report.checks}
+        checks = [item.model_copy(deep=True) for item in local_report.checks]
+        by_name = {item.name: item for item in checks}
+        deterministic_authoritative = {
+            "knowledge_scope",
+            "terminology_consistency",
+            "exercise_delivery",
+        }
+
+        def merge_status(current: str, incoming: str) -> str:
+            order = {"pass": 0, "warning": 1, "fail": 2}
+            return incoming if order[incoming] > order[current] else current
+
         for item in semantic_report.checks:
-            if item.name in local_names:
-                item.name = f"semantic_{item.name}"
-            semantic_checks.append(item)
-        blocking = [*local_report.blocking_issues, *semantic_report.blocking_issues]
-        warnings = [*local_report.warnings, *semantic_report.warnings]
-        status = "fail" if blocking or semantic_report.status == "fail" else (
-            "warning"
-            if warnings or semantic_report.status == "warning"
-            else "pass"
-        )
-        checks = [*local_report.checks, *semantic_checks]
+            if item.name in deterministic_authoritative:
+                continue
+            target = by_name.get(item.name)
+            if target is None:
+                target = by_name[
+                    "unknown_lesson_content"
+                    if item.status == "fail"
+                    else "student_action_consistency"
+                ]
+            target.status = merge_status(target.status, item.status)
+            target.issues.extend(
+                f"语义复核：{issue}"
+                for issue in item.issues
+                if f"语义复核：{issue}" not in target.issues
+            )
+
+        blocking = [
+            issue
+            for item in checks
+            if item.status == "fail"
+            for issue in item.issues
+        ]
+        warnings = [
+            issue
+            for item in checks
+            if item.status == "warning"
+            for issue in item.issues
+        ]
+        status = "fail" if blocking else ("warning" if warnings else "pass")
 
         def scope_status(scope: str) -> str:
             scoped = [item for item in checks if item.scope == scope]

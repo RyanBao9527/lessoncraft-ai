@@ -15,8 +15,10 @@ affected_ids 必须列出被直接修改或因依赖关系需要重新生成的 
 
 禁止：直接修改教案或 PPT；返回 Blueprint 外知识；破坏 ID 引用；静默修改未受影响内容；
 改写未被要求修改的示例代码。修改后仍须满足知识范围、结构化学生操作、STEP 时间拆分、
-练习交付方式、目标覆盖、术语和引用一致性。调整课程时长时必须同步更新 duration 的三个
-子时间，且所有 STEP 总时间严格等于课程时长。
+练习交付方式、目标覆盖、术语和引用一致性。修改术语时同步维护 aliases 且不得产生冲突；
+修改知识范围时保证每个 required 有正式内容、mentioned_only 不被提升、excluded 不进入
+派生内容；修改练习时遵守 delivery_mode 与 display_on_slide 的固定矩阵。调整课程时长时
+必须同步更新 duration 的三个子时间，且所有 STEP 总时间严格等于课程时长。
 
 只输出 JSON，不使用 Markdown。输出前自检 updated_blueprint 可通过原 Blueprint Schema 校验。
 """.strip()

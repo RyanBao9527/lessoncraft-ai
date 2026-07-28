@@ -30,7 +30,10 @@ SYSTEM_PROMPT = """
 - 每页 objective_ids 必须是所有 source_step_ids 对应 STEP.objective_ids 的子集。
   不确定时宁可少引用，不得跨 STEP 借用目标。
 - activity_ids 与 exercise_ids 只引用 Blueprint 已有 ID；代码预测活动必须落在实际
-  code_example_id 页面；display_on_slide=false 的练习不得进入学生 PPT。
+  code_example_id 页面；display_on_slide=false 的练习不得进入学生 PPT；
+  display_on_slide=true 的练习必须至少绑定一页、显示原 Exercise.question，并与页面目标匹配。
+- terminology.term 是首选展示词；允许使用已声明 aliases 以适应学生语言，但不得创造
+  新同义词、改变定义或把 alias 当作新知识点。
 - 代码页必须设置 code_example_id 和 code_display，二者引用同一个 Blueprint 原始代码；
   highlight_lines 只能标记原代码行号，不得改写代码。
 - 每页提供简短的教师逐页讲解提示：讲解重点、课堂提问、演示动作、常见错误、
@@ -44,7 +47,8 @@ SYSTEM_PROMPT = """
 
 禁止输出 Markdown、代码围栏和额外说明。
 输出前自检：页面类型有变化、任意连续 4 页内有互动、无信息过载、讲解提示不是演讲稿、
-页数和来源 ID 合法、目标为来源 STEP 子集、投屏时间未超预算、练习交付方式正确、
+页数和来源 ID 合法、目标为来源 STEP 子集、投屏时间未超预算、术语 alias 合法、
+练习交付方式正确、
 目标覆盖、顺序和代码引用一致。step_bindings 与非法来源修复记录由程序确定性生成，
 模型不要自行猜测。只返回符合 JSON Schema 的 JSON。
 """.strip()
