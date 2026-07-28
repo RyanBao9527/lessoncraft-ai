@@ -1,0 +1,1521 @@
+{
+  "course_input": {
+    "language": "Python",
+    "topic": "猜数字游戏",
+    "age_range": "10～12 岁",
+    "student_level": "学过变量、input 和 if",
+    "duration_minutes": 90,
+    "core_goal": "理解并使用 while 循环",
+    "teaching_style": "互动实践型",
+    "max_slides": 15,
+    "additional_requirements": "课堂最后完成一个完整小游戏"
+  },
+  "blueprint": {
+    "course": {
+      "title": "Python 猜数字游戏：用 while 让游戏继续",
+      "language": "Python",
+      "age_range": "10～12 岁",
+      "student_level": "学过变量、input 和 if",
+      "duration_minutes": 90,
+      "core_goal": "理解并使用 while 循环",
+      "teaching_style": "互动实践型",
+      "max_slides": 15,
+      "additional_requirements": "课堂最后完成一个完整小游戏"
+    },
+    "knowledge_scope": {
+      "required": [
+        "while",
+        "循环条件",
+        "循环变量",
+        "input",
+        "int",
+        "if",
+        "elif"
+      ],
+      "mentioned_only": [],
+      "excluded": [
+        "else"
+      ]
+    },
+    "terminology": [
+      {
+        "term": "while 循环",
+        "standard_definition": "while 循环会在条件为 True 时重复执行一组代码。"
+      },
+      {
+        "term": "循环条件",
+        "standard_definition": "循环条件决定循环是否继续执行，每次循环前都会重新判断。"
+      },
+      {
+        "term": "循环变量",
+        "standard_definition": "循环变量是在循环过程中被更新、并帮助循环最终停止的变量。"
+      }
+    ],
+    "learning_objectives": [
+      {
+        "id": "OBJ-01",
+        "content": "能用自己的话说明 while 循环何时继续、何时停止",
+        "assessment": "根据两段短代码，正确判断循环次数和停止条件"
+      },
+      {
+        "id": "OBJ-02",
+        "content": "能使用 while、input 和 if 完成可重复猜测的猜数字游戏",
+        "assessment": "独立完成游戏，让玩家猜中前可以重复输入并获得大小提示"
+      }
+    ],
+    "knowledge_points": [
+      {
+        "id": "K-01",
+        "name": "while 循环",
+        "definition": "while 循环会在条件为 True 时重复执行缩进代码块。",
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "common_errors": [
+          "把 while 写成 if，导致代码只判断一次",
+          "忘记给循环体缩进"
+        ]
+      },
+      {
+        "id": "K-02",
+        "name": "循环条件",
+        "definition": "循环条件需要随着程序运行发生变化，猜中后条件应变为 False。",
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "common_errors": [
+          "条件永远为 True，形成无限循环",
+          "把不等于 != 写成等于 =="
+        ]
+      },
+      {
+        "id": "K-03",
+        "name": "循环中的输入与判断",
+        "definition": "每轮循环读取一次输入，再用 if/elif 给出大小提示。",
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "common_errors": [
+          "忘记用 int 转换 input 的结果",
+          "在循环外读取输入，无法重复猜测"
+        ]
+      }
+    ],
+    "lesson_flow": [
+      {
+        "id": "STEP-01",
+        "title": "情境导入：一次没猜中怎么办",
+        "duration_minutes": 10,
+        "duration": {
+          "total_minutes": 10,
+          "presentation_minutes": 8,
+          "student_practice_minutes": 1,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [],
+        "teacher_activity": "演示只允许猜一次的程序，请学生指出体验问题，并板书“重复直到猜中”。",
+        "student_activity": "体验程序，两人讨论怎样让玩家继续猜。",
+        "student_action": {
+          "action": "体验一次只能猜一次的程序，两人讨论怎样让玩家继续猜。",
+          "input_variations": [],
+          "forbidden_actions": [],
+          "expected_evidence": "学生能够提出让程序重复读取输入的需求"
+        },
+        "key_question": "如果第一次没猜中，程序怎样回到输入的位置？"
+      },
+      {
+        "id": "STEP-02",
+        "title": "发现 while 循环",
+        "duration_minutes": 15,
+        "duration": {
+          "total_minutes": 15,
+          "presentation_minutes": 12,
+          "student_practice_minutes": 2,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02"
+        ],
+        "teacher_activity": "用生活中的“只要没到站就继续走”类比 while，带学生追踪条件变化。",
+        "student_activity": "参与人体 while 循环，观察条件变化并说明循环何时停止。",
+        "student_action": {
+          "action": "参与人体 while 循环，观察条件变化并说明循环何时停止。",
+          "input_variations": [],
+          "forbidden_actions": [],
+          "expected_evidence": "学生能够指出条件为 False 时循环停止"
+        },
+        "key_question": "while 后面的条件为 True 时，程序会做什么？"
+      },
+      {
+        "id": "STEP-03",
+        "title": "代码演示：重复猜测",
+        "duration_minutes": 15,
+        "duration": {
+          "total_minutes": 15,
+          "presentation_minutes": 9,
+          "student_practice_minutes": 5,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "逐行运行 CODE-01，重点追踪 guess 的新值以及循环何时停止。",
+        "student_activity": "先预测运行结果，再使用不同输入运行同一份代码进行验证。",
+        "student_action": {
+          "action": "先预测运行结果，再使用不同输入运行同一份代码进行验证。",
+          "input_variations": [
+            "输入小于答案的数字",
+            "输入大于答案的数字",
+            "输入等于答案的数字"
+          ],
+          "forbidden_actions": [
+            "修改answer变量"
+          ],
+          "expected_evidence": "学生能够解释三种输入分别进入哪个判断分支"
+        },
+        "key_question": "哪一行代码让循环条件有机会变成 False？"
+      },
+      {
+        "id": "STEP-04",
+        "title": "互动实践：加入大小提示",
+        "duration_minutes": 20,
+        "duration": {
+          "total_minutes": 20,
+          "presentation_minutes": 12,
+          "student_practice_minutes": 7,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "提供半成品代码，使用提问引导学生把 if/elif 放进循环。",
+        "student_activity": "两人一组补全大小提示，并交换测试不同输入。",
+        "student_action": {
+          "action": "两人一组补全 if/elif 大小提示，并交换测试不同输入。",
+          "input_variations": [
+            "偏小输入",
+            "偏大输入",
+            "正确输入"
+          ],
+          "forbidden_actions": [
+            "补充else分支"
+          ],
+          "expected_evidence": "学生能够说明大小判断必须位于循环体内"
+        },
+        "key_question": "大小提示应该放在循环里面还是外面？为什么？"
+      },
+      {
+        "id": "STEP-05",
+        "title": "项目挑战：完成猜数字游戏",
+        "duration_minutes": 20,
+        "duration": {
+          "total_minutes": 20,
+          "presentation_minutes": 7,
+          "student_practice_minutes": 12,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "发布完成标准，巡视时按“输入—判断—更新—停止”顺序诊断问题。",
+        "student_activity": "独立完成游戏，使用三组测试数据确认偏大、偏小和猜中分支。",
+        "student_action": {
+          "action": "独立完成游戏，并使用偏小、偏大和正确三类输入进行同伴测试。",
+          "input_variations": [
+            "偏小输入",
+            "偏大输入",
+            "正确输入"
+          ],
+          "forbidden_actions": [],
+          "expected_evidence": "作品通过三类输入测试，学生能够解释停止条件"
+        },
+        "key_question": "你用什么证据证明游戏在猜中前会一直运行？"
+      },
+      {
+        "id": "STEP-06",
+        "title": "展示、练习与总结",
+        "duration_minutes": 10,
+        "duration": {
+          "total_minutes": 10,
+          "presentation_minutes": 6,
+          "student_practice_minutes": 3,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "请学生演示作品，用出口卡检查术语、停止条件和代码阅读能力。",
+        "student_activity": "演示作品，完成练习，并用一句话说明 while 循环。",
+        "student_action": {
+          "action": "演示作品，完成课堂检查，并用一句话说明 while 循环。",
+          "input_variations": [],
+          "forbidden_actions": [],
+          "expected_evidence": "学生能够准确说出 while 继续与停止的条件"
+        },
+        "key_question": "写 while 循环时，怎样避免它永远停不下来？"
+      }
+    ],
+    "code_examples": [
+      {
+        "id": "CODE-01",
+        "title": "最小可运行版本：重复猜到正确",
+        "language": "python",
+        "code": "answer = 7\nguess = 0\n\nwhile guess != answer:\n    guess = int(input(\"请输入 1～10 的数字：\"))\n\nprint(\"猜对了！\")",
+        "explanation": "guess 每轮都会更新；当 guess 等于 answer 时，循环条件变为 False。",
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ]
+      },
+      {
+        "id": "CODE-02",
+        "title": "完整版本：加入大小提示",
+        "language": "python",
+        "code": "answer = 7\nguess = 0\n\nwhile guess != answer:\n    guess = int(input(\"请输入 1～10 的数字：\"))\n    if guess < answer:\n        print(\"太小了\")\n    elif guess > answer:\n        print(\"太大了\")\n\nprint(\"猜对了！\")",
+        "explanation": "输入和大小判断都位于循环体内，因此每次猜测后都会得到反馈并继续判断。",
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ]
+      }
+    ],
+    "activities": [
+      {
+        "id": "ACT-01",
+        "title": "人体 while 循环",
+        "instructions": "一名学生举条件牌，另一名学生在条件为 True 时重复走一步，直到到达终点。",
+        "duration_minutes": 5,
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "step_ids": [
+          "STEP-02"
+        ],
+        "code_example_ids": []
+      },
+      {
+        "id": "ACT-02",
+        "title": "同伴测试员",
+        "instructions": "交换游戏，用偏小、偏大、正确三类输入测试，并记录一次发现。",
+        "duration_minutes": 8,
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "step_ids": [
+          "STEP-05"
+        ],
+        "code_example_ids": [
+          "CODE-02"
+        ]
+      },
+      {
+        "id": "ACT-03",
+        "title": "代码侦探：预测并验证",
+        "instructions": "圈出循环条件和输入更新行，先预测结果，再用不同输入运行同一份 CODE-01 验证。",
+        "duration_minutes": 5,
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "step_ids": [
+          "STEP-03"
+        ],
+        "code_example_ids": [
+          "CODE-01"
+        ]
+      }
+    ],
+    "exercises": [
+      {
+        "id": "EX-01",
+        "question": "当 while 后面的条件为 False 时，循环体还会执行吗？",
+        "answer": "不会。程序会跳到循环后的下一行。",
+        "difficulty": "基础",
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "delivery_mode": "in_class",
+        "display_on_slide": false
+      },
+      {
+        "id": "EX-02",
+        "question": "为什么 guess = int(input(...)) 必须放在 while 循环里面？",
+        "answer": "这样每一轮都能获得新的猜测，循环条件才可能改变并最终停止。",
+        "difficulty": "进阶",
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "delivery_mode": "teacher_optional",
+        "display_on_slide": false
+      },
+      {
+        "id": "EX-03",
+        "question": "在完整游戏中增加猜测次数统计，并在猜中后显示次数。",
+        "answer": "循环前设置 count = 0，每轮输入后执行 count += 1，循环后输出 count。",
+        "difficulty": "挑战",
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "delivery_mode": "extension_challenge",
+        "display_on_slide": true
+      }
+    ],
+    "revision_notes": []
+  },
+  "lesson_plan": {
+    "plan_type": "concise",
+    "course_overview": "面向 10～12 岁 学生的 90 分钟Python课程；核心任务：理解并使用 while 循环。",
+    "teaching_objectives": [
+      "能用自己的话说明 while 循环何时继续、何时停止",
+      "能使用 while、input 和 if 完成可重复猜测的猜数字游戏"
+    ],
+    "key_points": [
+      "while 循环：while 循环会在条件为 True 时重复执行缩进代码块。",
+      "循环条件：循环条件需要随着程序运行发生变化，猜中后条件应变为 False。",
+      "循环中的输入与判断：每轮循环读取一次输入，再用 if/elif 给出大小提示。"
+    ],
+    "difficult_points": [
+      "把 while 写成 if，导致代码只判断一次",
+      "条件永远为 True，形成无限循环",
+      "忘记用 int 转换 input 的结果"
+    ],
+    "preparation": [
+      "可运行 Python 的教学环境",
+      "投影设备与学生练习文件",
+      "提前验证 Blueprint 中的示例代码"
+    ],
+    "stages": [
+      {
+        "step_id": "STEP-01",
+        "title": "情境导入：一次没猜中怎么办",
+        "duration_minutes": 10,
+        "duration": {
+          "total_minutes": 10,
+          "presentation_minutes": 8,
+          "student_practice_minutes": 1,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [],
+        "teacher_activity": "演示只允许猜一次的程序，请学生指出体验问题，并板书“重复直到猜中”。",
+        "student_activity": "体验一次只能猜一次的程序，两人讨论怎样让玩家继续猜。",
+        "student_action": {
+          "action": "体验一次只能猜一次的程序，两人讨论怎样让玩家继续猜。",
+          "input_variations": [],
+          "forbidden_actions": [],
+          "expected_evidence": "学生能够提出让程序重复读取输入的需求"
+        },
+        "key_question": "如果第一次没猜中，程序怎样回到输入的位置？",
+        "assessment": "根据两段短代码，正确判断循环次数和停止条件",
+        "slide_ids": [
+          "SLIDE-02",
+          "SLIDE-03",
+          "SLIDE-04"
+        ],
+        "materials_or_code": []
+      },
+      {
+        "step_id": "STEP-02",
+        "title": "发现 while 循环",
+        "duration_minutes": 15,
+        "duration": {
+          "total_minutes": 15,
+          "presentation_minutes": 12,
+          "student_practice_minutes": 2,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02"
+        ],
+        "teacher_activity": "用生活中的“只要没到站就继续走”类比 while，带学生追踪条件变化。",
+        "student_activity": "参与人体 while 循环，观察条件变化并说明循环何时停止。",
+        "student_action": {
+          "action": "参与人体 while 循环，观察条件变化并说明循环何时停止。",
+          "input_variations": [],
+          "forbidden_actions": [],
+          "expected_evidence": "学生能够指出条件为 False 时循环停止"
+        },
+        "key_question": "while 后面的条件为 True 时，程序会做什么？",
+        "assessment": "根据两段短代码，正确判断循环次数和停止条件",
+        "slide_ids": [
+          "SLIDE-05",
+          "SLIDE-06",
+          "SLIDE-07"
+        ],
+        "materials_or_code": [
+          "ACT-01"
+        ]
+      },
+      {
+        "step_id": "STEP-03",
+        "title": "代码演示：重复猜测",
+        "duration_minutes": 15,
+        "duration": {
+          "total_minutes": 15,
+          "presentation_minutes": 9,
+          "student_practice_minutes": 5,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "逐行运行 CODE-01，重点追踪 guess 的新值以及循环何时停止。",
+        "student_activity": "先预测运行结果，再使用不同输入运行同一份代码进行验证。",
+        "student_action": {
+          "action": "先预测运行结果，再使用不同输入运行同一份代码进行验证。",
+          "input_variations": [
+            "输入小于答案的数字",
+            "输入大于答案的数字",
+            "输入等于答案的数字"
+          ],
+          "forbidden_actions": [
+            "修改answer变量"
+          ],
+          "expected_evidence": "学生能够解释三种输入分别进入哪个判断分支"
+        },
+        "key_question": "哪一行代码让循环条件有机会变成 False？",
+        "assessment": "根据两段短代码，正确判断循环次数和停止条件；独立完成游戏，让玩家猜中前可以重复输入并获得大小提示",
+        "slide_ids": [
+          "SLIDE-08",
+          "SLIDE-09"
+        ],
+        "materials_or_code": [
+          "ACT-03",
+          "CODE-01"
+        ]
+      },
+      {
+        "step_id": "STEP-04",
+        "title": "互动实践：加入大小提示",
+        "duration_minutes": 20,
+        "duration": {
+          "total_minutes": 20,
+          "presentation_minutes": 12,
+          "student_practice_minutes": 7,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "提供半成品代码，使用提问引导学生把 if/elif 放进循环。",
+        "student_activity": "两人一组补全 if/elif 大小提示，并交换测试不同输入。",
+        "student_action": {
+          "action": "两人一组补全 if/elif 大小提示，并交换测试不同输入。",
+          "input_variations": [
+            "偏小输入",
+            "偏大输入",
+            "正确输入"
+          ],
+          "forbidden_actions": [
+            "补充else分支"
+          ],
+          "expected_evidence": "学生能够说明大小判断必须位于循环体内"
+        },
+        "key_question": "大小提示应该放在循环里面还是外面？为什么？",
+        "assessment": "独立完成游戏，让玩家猜中前可以重复输入并获得大小提示",
+        "slide_ids": [
+          "SLIDE-10",
+          "SLIDE-11"
+        ],
+        "materials_or_code": []
+      },
+      {
+        "step_id": "STEP-05",
+        "title": "项目挑战：完成猜数字游戏",
+        "duration_minutes": 20,
+        "duration": {
+          "total_minutes": 20,
+          "presentation_minutes": 7,
+          "student_practice_minutes": 12,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "发布完成标准，巡视时按“输入—判断—更新—停止”顺序诊断问题。",
+        "student_activity": "独立完成游戏，并使用偏小、偏大和正确三类输入进行同伴测试。",
+        "student_action": {
+          "action": "独立完成游戏，并使用偏小、偏大和正确三类输入进行同伴测试。",
+          "input_variations": [
+            "偏小输入",
+            "偏大输入",
+            "正确输入"
+          ],
+          "forbidden_actions": [],
+          "expected_evidence": "作品通过三类输入测试，学生能够解释停止条件"
+        },
+        "key_question": "你用什么证据证明游戏在猜中前会一直运行？",
+        "assessment": "独立完成游戏，让玩家猜中前可以重复输入并获得大小提示",
+        "slide_ids": [
+          "SLIDE-12",
+          "SLIDE-13"
+        ],
+        "materials_or_code": [
+          "ACT-02",
+          "CODE-02"
+        ]
+      },
+      {
+        "step_id": "STEP-06",
+        "title": "展示、练习与总结",
+        "duration_minutes": 10,
+        "duration": {
+          "total_minutes": 10,
+          "presentation_minutes": 6,
+          "student_practice_minutes": 3,
+          "transition_minutes": 1
+        },
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "teacher_activity": "请学生演示作品，用出口卡检查术语、停止条件和代码阅读能力。",
+        "student_activity": "演示作品，完成课堂检查，并用一句话说明 while 循环。",
+        "student_action": {
+          "action": "演示作品，完成课堂检查，并用一句话说明 while 循环。",
+          "input_variations": [],
+          "forbidden_actions": [],
+          "expected_evidence": "学生能够准确说出 while 继续与停止的条件"
+        },
+        "key_question": "写 while 循环时，怎样避免它永远停不下来？",
+        "assessment": "根据两段短代码，正确判断循环次数和停止条件；独立完成游戏，让玩家猜中前可以重复输入并获得大小提示",
+        "slide_ids": [
+          "SLIDE-14",
+          "SLIDE-15"
+        ],
+        "materials_or_code": []
+      }
+    ],
+    "classroom_assessment": [
+      "根据两段短代码，正确判断循环次数和停止条件",
+      "独立完成游戏，让玩家猜中前可以重复输入并获得大小提示"
+    ],
+    "homework": [
+      "在完整游戏中增加猜测次数统计，并在猜中后显示次数。"
+    ],
+    "teacher_reminders": [
+      "先让学生预测结果，再运行代码验证。",
+      "只使用 Blueprint 中定义的术语与示例代码。",
+      "教案时间含讲解、学生操作、巡视和过渡；PPT 备注仅表示投屏讲解时间。",
+      "关注过程性提问，不以完成速度作为唯一评价标准。"
+    ],
+    "code_example_ids": [
+      "CODE-01",
+      "CODE-02"
+    ]
+  },
+  "slide_deck": {
+    "title": "Python 猜数字游戏：用 while 让游戏继续",
+    "slides": [
+      {
+        "id": "SLIDE-01",
+        "title": "Python 猜数字游戏：用 while 让游戏继续",
+        "layout": "title",
+        "slide_type": "cover",
+        "learning_action": "observe",
+        "visual_direction": "深色封面，只保留课程挑战与完成目标。",
+        "content": [
+          "Python · 10～12 岁",
+          "理解并使用 while 循环"
+        ],
+        "source_step_ids": [],
+        "objective_ids": [],
+        "knowledge_ids": [],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "none",
+          "prompt": "",
+          "expected_response": ""
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "用最终作品建立期待，不展开知识定义。",
+          "question": "今天这个程序需要解决什么问题？",
+          "demo": "",
+          "warning": "",
+          "transition": "先体验一次只允许猜一次的版本。",
+          "suggested_minutes": 1
+        }
+      },
+      {
+        "id": "SLIDE-02",
+        "title": "情境导入：一次没猜中怎么办",
+        "layout": "question",
+        "slide_type": "scenario",
+        "learning_action": "discuss",
+        "visual_direction": "中央大问题，底部保留同伴讨论提示。",
+        "content": [
+          "第一次猜错后，游戏结束了。",
+          "我们希望玩家可以继续猜。"
+        ],
+        "source_step_ids": [
+          "STEP-01"
+        ],
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "question",
+          "prompt": "如果第一次没猜中，程序怎样回到输入的位置？",
+          "expected_response": "让程序回到输入位置并再次判断。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "只描述体验冲突，让学生先提出“重复”的需求。",
+          "question": "如果第一次没猜中，程序怎样回到输入的位置？",
+          "demo": "运行一次只能猜一次的版本。",
+          "warning": "",
+          "transition": "把学生的想法整理成今天的课程挑战。",
+          "suggested_minutes": 3
+        }
+      },
+      {
+        "id": "SLIDE-03",
+        "title": "今天的挑战：猜中前一直继续",
+        "layout": "section",
+        "slide_type": "challenge",
+        "learning_action": "observe",
+        "visual_direction": "用一句挑战目标和三项完成标准形成章节页。",
+        "content": [
+          "允许重复输入",
+          "每次给出大小提示",
+          "猜中后停止并祝贺"
+        ],
+        "source_step_ids": [
+          "STEP-01"
+        ],
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "none",
+          "prompt": "",
+          "expected_response": ""
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "把学习目标改写成学生能判断是否完成的作品标准。",
+          "question": "完成后你会用哪三种输入测试游戏？",
+          "demo": "",
+          "warning": "",
+          "transition": "先找出我们已经会用的工具。",
+          "suggested_minutes": 2
+        }
+      },
+      {
+        "id": "SLIDE-04",
+        "title": "旧工具够用吗？",
+        "layout": "comparison",
+        "slide_type": "review",
+        "learning_action": "recall",
+        "visual_direction": "左右对比：已有工具与尚未解决的问题。",
+        "content": [
+          "变量：保存答案",
+          "input：读取猜测",
+          "if：判断一次",
+          "缺少：重复判断"
+        ],
+        "source_step_ids": [
+          "STEP-01"
+        ],
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "choice",
+          "prompt": "哪一个工具只能判断一次，不能让游戏继续？",
+          "expected_response": "if 只能完成一次条件判断。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "快速激活变量、input 和 if，不重新讲授旧知识。",
+          "question": "哪一个工具只能判断一次？",
+          "demo": "",
+          "warning": "不要把旧知识回顾扩展成新课。",
+          "transition": "接下来认识负责“重复”的新工具。",
+          "suggested_minutes": 3
+        }
+      },
+      {
+        "id": "SLIDE-05",
+        "title": "while 循环：条件为真就继续",
+        "layout": "concept",
+        "slide_type": "concept",
+        "learning_action": "explain",
+        "visual_direction": "左侧标准定义，右侧 True/False 两种去向。",
+        "content": [
+          "while 循环会在条件为 True 时重复执行一组代码。",
+          "条件为 True：执行并再次判断",
+          "条件为 False：离开循环"
+        ],
+        "source_step_ids": [
+          "STEP-02"
+        ],
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02"
+        ],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "none",
+          "prompt": "",
+          "expected_response": ""
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "强调每轮开始前都会重新判断条件。",
+          "question": "条件变成 False 后，程序去哪里？",
+          "demo": "",
+          "warning": "避免把 while 说成固定重复次数。",
+          "transition": "用一个流程把判断和重复连接起来。",
+          "suggested_minutes": 4
+        }
+      },
+      {
+        "id": "SLIDE-06",
+        "title": "先判断，再执行，再回去",
+        "layout": "concept",
+        "slide_type": "process",
+        "learning_action": "predict",
+        "visual_direction": "三步水平流程：判断条件、执行代码、回到判断。",
+        "content": [
+          "判断循环条件",
+          "执行缩进代码",
+          "回到条件再次判断"
+        ],
+        "source_step_ids": [
+          "STEP-02"
+        ],
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02"
+        ],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "prediction",
+          "prompt": "如果条件连续三次都是 True，循环体会执行几次？",
+          "expected_response": "执行三次，然后还要继续判断下一次条件。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "沿流程指读一遍，重点是执行后会回到条件。",
+          "question": "连续三次 True 会执行几次？",
+          "demo": "用手指沿三步流程走一圈。",
+          "warning": "",
+          "transition": "把流程变成一个全班可参与的循环。",
+          "suggested_minutes": 3
+        }
+      },
+      {
+        "id": "SLIDE-07",
+        "title": "人体 while 循环",
+        "layout": "activity",
+        "slide_type": "interaction",
+        "learning_action": "practice",
+        "visual_direction": "突出动作指令与停止条件，减少解释文字。",
+        "content": [
+          "一名学生举条件牌，另一名学生在条件为 True 时重复走一步，直到到达终点。",
+          "观察：条件什么时候改变？",
+          "目标：能说出循环何时停止"
+        ],
+        "source_step_ids": [
+          "STEP-02"
+        ],
+        "objective_ids": [
+          "OBJ-01"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02"
+        ],
+        "code_example_id": null,
+        "activity_ids": [
+          "ACT-01"
+        ],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "hands_on",
+          "prompt": "按条件牌行动；条件变为 False 时立即停下。",
+          "expected_response": "学生能在条件变化时停止动作并说明原因。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "先宣布规则，再开始动作；结束后追问停止原因。",
+          "question": "你为什么在这一轮停下？",
+          "demo": "请两名学生分别扮演条件与循环体。",
+          "warning": "",
+          "transition": "现在把刚才的动作规则写成最小代码。",
+          "suggested_minutes": 5
+        }
+      },
+      {
+        "id": "SLIDE-08",
+        "title": "最小代码：重复输入直到猜中",
+        "layout": "code",
+        "slide_type": "code_minimal",
+        "learning_action": "code",
+        "visual_direction": "代码占主区域，只解释循环条件与输入更新。",
+        "content": [
+          "条件：guess != answer",
+          "每轮更新 guess",
+          "猜中后离开循环"
+        ],
+        "source_step_ids": [
+          "STEP-03"
+        ],
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": "CODE-01",
+        "activity_ids": [
+          "ACT-03"
+        ],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "none",
+          "prompt": "",
+          "expected_response": ""
+        },
+        "code_display": {
+          "code_example_id": "CODE-01",
+          "highlight_lines": [
+            4,
+            5
+          ],
+          "reveal_step": 1
+        },
+        "speaker_notes": {
+          "explanation": "guess 每轮都会更新；当 guess 等于 answer 时，循环条件变为 False。",
+          "question": "哪一行让条件有机会变成 False？",
+          "demo": "逐行运行 CODE-01，观察 guess 的变化。",
+          "warning": "input 必须位于循环体内。",
+          "transition": "先不运行，预测不同输入会走几轮。",
+          "suggested_minutes": 5
+        }
+      },
+      {
+        "id": "SLIDE-09",
+        "title": "运行前先预测",
+        "layout": "code",
+        "slide_type": "prediction",
+        "learning_action": "predict",
+        "visual_direction": "保留同一代码，突出循环条件并放大预测问题。",
+        "content": [
+          "输入 3 → True",
+          "输入 7 → False",
+          "输出：猜对了"
+        ],
+        "source_step_ids": [
+          "STEP-03"
+        ],
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": "CODE-01",
+        "activity_ids": [
+          "ACT-03"
+        ],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "prediction",
+          "prompt": "依次输入 3、7，循环体一共执行几次？",
+          "expected_response": "执行两次；第二次输入后条件变为 False。"
+        },
+        "code_display": {
+          "code_example_id": "CODE-01",
+          "highlight_lines": [
+            4,
+            5,
+            7
+          ],
+          "reveal_step": 2
+        },
+        "speaker_notes": {
+          "explanation": "先收集预测，再运行验证；不要直接公布答案。",
+          "question": "输入 3、7 时循环执行几次？",
+          "demo": "用两次输入运行同一份 Blueprint 代码。",
+          "warning": "",
+          "transition": "最小循环能停止了，下一步加入大小提示。",
+          "suggested_minutes": 4
+        }
+      },
+      {
+        "id": "SLIDE-10",
+        "title": "互动实践：加入大小提示",
+        "layout": "activity",
+        "slide_type": "activity",
+        "learning_action": "practice",
+        "visual_direction": "任务置顶，下面给出三步完成路径。",
+        "content": [
+          "把 if / elif 放进循环体",
+          "每次输入后给出大小提示",
+          "用偏小、偏大、正确三类输入测试"
+        ],
+        "source_step_ids": [
+          "STEP-04"
+        ],
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "fill_blank",
+          "prompt": "大小判断应该放在 while 的里面还是外面？",
+          "expected_response": "放在循环体内，才能每轮都给反馈。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "先明确成功标准，再让学生补全半成品。",
+          "question": "大小判断应该放在哪里？",
+          "demo": "展示缩进位置，不提供新的代码版本。",
+          "warning": "常见错误是判断放到循环外。",
+          "transition": "动手前先诊断两种最常见的错误。",
+          "suggested_minutes": 8
+        }
+      },
+      {
+        "id": "SLIDE-11",
+        "title": "调试挑战：为什么它停不下来？",
+        "layout": "question",
+        "slide_type": "error",
+        "learning_action": "debug",
+        "visual_direction": "错误现象居中，底部列出检查顺序。",
+        "content": [
+          "把 while 写成 if，导致代码只判断一次",
+          "忘记给循环体缩进",
+          "条件永远为 True，形成无限循环"
+        ],
+        "source_step_ids": [
+          "STEP-04"
+        ],
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "debug",
+          "prompt": "先检查哪一项：条件、缩进，还是变量更新？",
+          "expected_response": "按条件—缩进—变量更新的顺序逐项检查。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "让学生说出诊断顺序，不直接替学生修改代码。",
+          "question": "循环不停止时先看哪里？",
+          "demo": "演示手动终止后再定位错误。",
+          "warning": "不要运行无法安全终止的死循环太久。",
+          "transition": "带着调试清单完成完整项目。",
+          "suggested_minutes": 4
+        }
+      },
+      {
+        "id": "SLIDE-12",
+        "title": "完整版本：加入大小提示",
+        "layout": "code",
+        "slide_type": "project",
+        "learning_action": "create",
+        "visual_direction": "完整代码置左，右侧列作品验收标准。",
+        "content": [
+          "循环读取输入",
+          "if / elif 给出反馈",
+          "猜中后退出并祝贺"
+        ],
+        "source_step_ids": [
+          "STEP-05"
+        ],
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": "CODE-02",
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "none",
+          "prompt": "",
+          "expected_response": ""
+        },
+        "code_display": {
+          "code_example_id": "CODE-02",
+          "highlight_lines": [
+            4,
+            5,
+            6,
+            8
+          ],
+          "reveal_step": 3
+        },
+        "speaker_notes": {
+          "explanation": "输入和大小判断都位于循环体内，因此每次猜测后都会得到反馈并继续判断。",
+          "question": "这份完整代码怎样满足三个作品标准？",
+          "demo": "运行 CODE-02 的三类测试输入。",
+          "warning": "保持 Blueprint 原始代码，不现场改写另一个版本。",
+          "transition": "接下来由学生独立完成并互相测试。",
+          "suggested_minutes": 5
+        }
+      },
+      {
+        "id": "SLIDE-13",
+        "title": "学生动手：完成并测试游戏",
+        "layout": "assignment",
+        "slide_type": "activity",
+        "learning_action": "create",
+        "visual_direction": "左侧任务，右侧三项完成检查。",
+        "content": [
+          "交换游戏，用偏小、偏大、正确三类输入测试，并记录一次发现。",
+          "测试偏小输入",
+          "测试偏大输入",
+          "测试正确输入"
+        ],
+        "source_step_ids": [
+          "STEP-05"
+        ],
+        "objective_ids": [
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": null,
+        "activity_ids": [
+          "ACT-02"
+        ],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "hands_on",
+          "prompt": "完成后与同伴交换测试，并记录一个发现。",
+          "expected_response": "作品通过三类输入测试，学生能说明停止条件。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "用完成标准巡视，不逐行替学生写代码。",
+          "question": "你用什么证据证明游戏能正确停止？",
+          "demo": "请同伴输入三类测试数据。",
+          "warning": "",
+          "transition": "用测试证据回到本课核心结论。",
+          "suggested_minutes": 2
+        }
+      },
+      {
+        "id": "SLIDE-14",
+        "title": "记住这三件事",
+        "layout": "summary",
+        "slide_type": "summary",
+        "learning_action": "reflect",
+        "visual_direction": "三条核心结论分层呈现，突出 True 与 False。",
+        "content": [
+          "while 循环会在条件为 True 时重复执行一组代码。",
+          "循环条件决定循环是否继续执行，每次循环前都会重新判断。",
+          "循环变量是在循环过程中被更新、并帮助循环最终停止的变量。"
+        ],
+        "source_step_ids": [
+          "STEP-06"
+        ],
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [],
+        "interaction": {
+          "type": "reflection",
+          "prompt": "用一句话说明 while 循环何时继续、何时停止。",
+          "expected_response": "条件为 True 时继续，条件为 False 时停止。"
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "先让学生复述，再显示标准术语。",
+          "question": "while 循环何时继续、何时停止？",
+          "demo": "",
+          "warning": "不要把总结变成重新讲一遍整节课。",
+          "transition": "最后选择一个挑战继续升级作品。",
+          "suggested_minutes": 4
+        }
+      },
+      {
+        "id": "SLIDE-15",
+        "title": "课后挑战：让游戏更完整",
+        "layout": "assignment",
+        "slide_type": "assignment",
+        "learning_action": "create",
+        "visual_direction": "大任务 + 两条验收标准，不展示答案。",
+        "content": [
+          "在完整游戏中增加猜测次数统计，并在猜中后显示次数。",
+          "保留原有功能",
+          "说明你新增了什么"
+        ],
+        "source_step_ids": [
+          "STEP-06"
+        ],
+        "objective_ids": [
+          "OBJ-01",
+          "OBJ-02"
+        ],
+        "knowledge_ids": [
+          "K-01",
+          "K-02",
+          "K-03"
+        ],
+        "code_example_id": null,
+        "activity_ids": [],
+        "exercise_ids": [
+          "EX-03"
+        ],
+        "interaction": {
+          "type": "none",
+          "prompt": "",
+          "expected_response": ""
+        },
+        "code_display": null,
+        "speaker_notes": {
+          "explanation": "只说明任务和验收标准，不在课堂末尾给出完整答案。",
+          "question": "你准备先修改哪一部分？",
+          "demo": "",
+          "warning": "",
+          "transition": "课程结束，保存作品与测试记录。",
+          "suggested_minutes": 2
+        }
+      }
+    ],
+    "step_bindings": [
+      {
+        "step_id": "STEP-01",
+        "slide_ids": [
+          "SLIDE-02",
+          "SLIDE-03",
+          "SLIDE-04"
+        ],
+        "activity_ids": [],
+        "code_example_ids": []
+      },
+      {
+        "step_id": "STEP-02",
+        "slide_ids": [
+          "SLIDE-05",
+          "SLIDE-06",
+          "SLIDE-07"
+        ],
+        "activity_ids": [
+          "ACT-01"
+        ],
+        "code_example_ids": []
+      },
+      {
+        "step_id": "STEP-03",
+        "slide_ids": [
+          "SLIDE-08",
+          "SLIDE-09"
+        ],
+        "activity_ids": [
+          "ACT-03"
+        ],
+        "code_example_ids": [
+          "CODE-01"
+        ]
+      },
+      {
+        "step_id": "STEP-04",
+        "slide_ids": [
+          "SLIDE-10",
+          "SLIDE-11"
+        ],
+        "activity_ids": [],
+        "code_example_ids": []
+      },
+      {
+        "step_id": "STEP-05",
+        "slide_ids": [
+          "SLIDE-12",
+          "SLIDE-13"
+        ],
+        "activity_ids": [
+          "ACT-02"
+        ],
+        "code_example_ids": [
+          "CODE-02"
+        ]
+      },
+      {
+        "step_id": "STEP-06",
+        "slide_ids": [
+          "SLIDE-14",
+          "SLIDE-15"
+        ],
+        "activity_ids": [],
+        "code_example_ids": []
+      }
+    ],
+    "source_repairs": []
+  },
+  "consistency_report": {
+    "status": "pass",
+    "checks": [
+      {
+        "name": "objective_coverage",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "knowledge_coverage",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "knowledge_scope",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "teaching_order",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "duration_total",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "step_duration_breakdown",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "presentation_time_budget",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "terminology_consistency",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "code_example_consistency",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "lesson_slide_mapping",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "activity_slide_binding",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "slide_objective_subset",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "student_action_consistency",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "exercise_objective_mapping",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "exercise_delivery",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "unknown_slide_knowledge",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "unknown_lesson_content",
+        "status": "pass",
+        "scope": "core",
+        "issues": []
+      },
+      {
+        "name": "slide_interaction_rhythm",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "slide_text_only_run",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "slide_information_load",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "lesson_plan_conciseness",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      },
+      {
+        "name": "speaker_notes_conciseness",
+        "status": "pass",
+        "scope": "execution",
+        "issues": []
+      }
+    ],
+    "blocking_issues": [],
+    "warnings": [],
+    "summary": {
+      "core_fact_status": "pass",
+      "execution_alignment_status": "pass",
+      "passed_checks": 22,
+      "warning_checks": 0,
+      "failed_checks": 0
+    }
+  }
+}

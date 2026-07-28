@@ -1,0 +1,2351 @@
+{
+  "schema": "beautify_inventory.v1",
+  "source": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/sources/guess-number-slides_4.pptx",
+  "slide_count": 15,
+  "canvas_px": {
+    "width": 1280,
+    "height": 720
+  },
+  "slides": [
+    {
+      "slide_index": 1,
+      "page_type": "cover_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s01_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 0,
+            "y": 0,
+            "width": 1280,
+            "height": 17
+          }
+        },
+        {
+          "slot_id": "s01_sh3",
+          "role": "title_candidate",
+          "text": "Python 猜数字游戏：用 while 让游戏继续",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 101,
+            "y": 149,
+            "width": 1075,
+            "height": 139
+          }
+        },
+        {
+          "slot_id": "s01_sh4",
+          "role": "label_candidate",
+          "text": "Python · 10～12 岁理解并使用 while 循环",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 149,
+            "y": 307,
+            "width": 979,
+            "height": 130
+          }
+        },
+        {
+          "slot_id": "s01_sh5",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 307,
+            "y": 518,
+            "width": 667,
+            "height": 61
+          }
+        },
+        {
+          "slot_id": "s01_sh6",
+          "role": "label_candidate",
+          "text": "从问题出发  ·  用代码验证  ·  完成作品",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 328,
+            "y": 528,
+            "width": 624,
+            "height": 38
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 2,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s02_sh2",
+          "role": "title_candidate",
+          "text": "?",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 79,
+            "y": 53,
+            "width": 106,
+            "height": 106
+          }
+        },
+        {
+          "slot_id": "s02_sh3",
+          "role": "title_candidate",
+          "text": "情境导入：一次没猜中怎么办",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 175,
+            "y": 50,
+            "width": 998,
+            "height": 101
+          }
+        },
+        {
+          "slot_id": "s02_sh4",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 96,
+            "y": 180,
+            "width": 1087,
+            "height": 197
+          }
+        },
+        {
+          "slot_id": "s02_sh5",
+          "role": "label_candidate",
+          "text": "如果第一次没猜中，程序怎样回到输入的位置？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 139,
+            "y": 206,
+            "width": 998,
+            "height": 139
+          }
+        },
+        {
+          "slot_id": "s02_sh6",
+          "role": "label_candidate",
+          "text": "●  第一次猜错后，游戏结束了。\n●  我们希望玩家可以继续猜。",
+          "paragraph_count": 2,
+          "geometry": {
+            "x": 130,
+            "y": 411,
+            "width": 1018,
+            "height": 120
+          }
+        },
+        {
+          "slot_id": "s02_sh7",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-01",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s02_sh8",
+          "role": "label_candidate",
+          "text": "SLIDE-02",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 3,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s03_sh2",
+          "role": "title_candidate",
+          "text": "COURSE CHALLENGE",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 91,
+            "y": 69,
+            "width": 518,
+            "height": 40
+          }
+        },
+        {
+          "slot_id": "s03_sh3",
+          "role": "title_candidate",
+          "text": "今天的挑战：猜中前一直继续",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 91,
+            "y": 125,
+            "width": 1056,
+            "height": 120
+          }
+        },
+        {
+          "slot_id": "s03_sh4",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 91,
+            "y": 312,
+            "width": 348,
+            "height": 156
+          }
+        },
+        {
+          "slot_id": "s03_sh5",
+          "role": "label_candidate",
+          "text": "01",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 112,
+            "y": 331,
+            "width": 60,
+            "height": 48
+          }
+        },
+        {
+          "slot_id": "s03_sh6",
+          "role": "label_candidate",
+          "text": "允许重复输入",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 115,
+            "y": 379,
+            "width": 300,
+            "height": 60
+          }
+        },
+        {
+          "slot_id": "s03_sh7",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 478,
+            "y": 312,
+            "width": 348,
+            "height": 156
+          }
+        },
+        {
+          "slot_id": "s03_sh8",
+          "role": "label_candidate",
+          "text": "02",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 499,
+            "y": 331,
+            "width": 60,
+            "height": 48
+          }
+        },
+        {
+          "slot_id": "s03_sh9",
+          "role": "label_candidate",
+          "text": "每次给出大小提示",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 502,
+            "y": 379,
+            "width": 300,
+            "height": 60
+          }
+        },
+        {
+          "slot_id": "s03_sh10",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 865,
+            "y": 312,
+            "width": 348,
+            "height": 156
+          }
+        },
+        {
+          "slot_id": "s03_sh11",
+          "role": "label_candidate",
+          "text": "03",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 886,
+            "y": 331,
+            "width": 60,
+            "height": 48
+          }
+        },
+        {
+          "slot_id": "s03_sh12",
+          "role": "label_candidate",
+          "text": "猜中后停止并祝贺",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 889,
+            "y": 379,
+            "width": 300,
+            "height": 60
+          }
+        },
+        {
+          "slot_id": "s03_sh13",
+          "role": "label_candidate",
+          "text": "SLIDE-03",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 674,
+            "width": 96,
+            "height": 23
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 4,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s04_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s04_sh3",
+          "role": "title_candidate",
+          "text": "旧工具够用吗？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s04_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s04_sh5",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 168,
+            "width": 533,
+            "height": 360
+          }
+        },
+        {
+          "slot_id": "s04_sh6",
+          "role": "label_candidate",
+          "text": "已经会用",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 115,
+            "y": 190,
+            "width": 461,
+            "height": 53
+          }
+        },
+        {
+          "slot_id": "s04_sh7",
+          "role": "label_candidate",
+          "text": "●  变量：保存答案\n●  input：读取猜测",
+          "paragraph_count": 2,
+          "geometry": {
+            "x": 115,
+            "y": 255,
+            "width": 466,
+            "height": 216
+          }
+        },
+        {
+          "slot_id": "s04_sh8",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 662,
+            "y": 168,
+            "width": 533,
+            "height": 360
+          }
+        },
+        {
+          "slot_id": "s04_sh9",
+          "role": "label_candidate",
+          "text": "还需解决",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 696,
+            "y": 190,
+            "width": 461,
+            "height": 53
+          }
+        },
+        {
+          "slot_id": "s04_sh10",
+          "role": "label_candidate",
+          "text": "●  if：判断一次\n●  缺少：重复判断",
+          "paragraph_count": 2,
+          "geometry": {
+            "x": 696,
+            "y": 255,
+            "width": 466,
+            "height": 216
+          }
+        },
+        {
+          "slot_id": "s04_sh11",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 570,
+            "width": 1109,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s04_sh12",
+          "role": "label_candidate",
+          "text": "选一选",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 98,
+            "y": 584,
+            "width": 120,
+            "height": 40
+          }
+        },
+        {
+          "slot_id": "s04_sh13",
+          "role": "label_candidate",
+          "text": "哪一个工具只能判断一次，不能让游戏继续？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 219,
+            "y": 577,
+            "width": 936,
+            "height": 53
+          }
+        },
+        {
+          "slot_id": "s04_sh14",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-01",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s04_sh15",
+          "role": "label_candidate",
+          "text": "SLIDE-04",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 5,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s05_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s05_sh3",
+          "role": "title_candidate",
+          "text": "while 循环：条件为真就继续",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s05_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s05_sh5",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 168,
+            "width": 499,
+            "height": 357
+          }
+        },
+        {
+          "slot_id": "s05_sh6",
+          "role": "label_candidate",
+          "text": "while 循环会在条件为 True 时重复执行一组代码。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 123,
+            "y": 216,
+            "width": 418,
+            "height": 254
+          }
+        },
+        {
+          "slot_id": "s05_sh7",
+          "role": "label_candidate",
+          "text": "●  条件为 True：执行并再次判断\n●  条件为 False：离开循环",
+          "paragraph_count": 2,
+          "geometry": {
+            "x": 619,
+            "y": 182,
+            "width": 542,
+            "height": 341
+          }
+        },
+        {
+          "slot_id": "s05_sh8",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-02",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s05_sh9",
+          "role": "label_candidate",
+          "text": "SLIDE-05",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 6,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s06_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s06_sh3",
+          "role": "title_candidate",
+          "text": "先判断，再执行，再回去",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s06_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s06_sh5",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 77,
+            "y": 197,
+            "width": 331,
+            "height": 230
+          }
+        },
+        {
+          "slot_id": "s06_sh6",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 202,
+            "y": 160,
+            "width": 79,
+            "height": 79
+          }
+        },
+        {
+          "slot_id": "s06_sh7",
+          "role": "label_candidate",
+          "text": "1",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 202,
+            "y": 165,
+            "width": 79,
+            "height": 65
+          }
+        },
+        {
+          "slot_id": "s06_sh8",
+          "role": "label_candidate",
+          "text": "判断循环条件",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 101,
+            "y": 235,
+            "width": 283,
+            "height": 120
+          }
+        },
+        {
+          "slot_id": "s06_sh9",
+          "role": "label_candidate",
+          "text": "→",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 413,
+            "y": 254,
+            "width": 53,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s06_sh10",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 472,
+            "y": 197,
+            "width": 331,
+            "height": 230
+          }
+        },
+        {
+          "slot_id": "s06_sh11",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 597,
+            "y": 160,
+            "width": 79,
+            "height": 79
+          }
+        },
+        {
+          "slot_id": "s06_sh12",
+          "role": "label_candidate",
+          "text": "2",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 597,
+            "y": 165,
+            "width": 79,
+            "height": 65
+          }
+        },
+        {
+          "slot_id": "s06_sh13",
+          "role": "label_candidate",
+          "text": "执行缩进代码",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 496,
+            "y": 235,
+            "width": 283,
+            "height": 120
+          }
+        },
+        {
+          "slot_id": "s06_sh14",
+          "role": "label_candidate",
+          "text": "→",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 808,
+            "y": 254,
+            "width": 53,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s06_sh15",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 868,
+            "y": 197,
+            "width": 331,
+            "height": 230
+          }
+        },
+        {
+          "slot_id": "s06_sh16",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 993,
+            "y": 160,
+            "width": 79,
+            "height": 79
+          }
+        },
+        {
+          "slot_id": "s06_sh17",
+          "role": "label_candidate",
+          "text": "3",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 993,
+            "y": 165,
+            "width": 79,
+            "height": 65
+          }
+        },
+        {
+          "slot_id": "s06_sh18",
+          "role": "label_candidate",
+          "text": "回到条件再次判断",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 892,
+            "y": 235,
+            "width": 283,
+            "height": 120
+          }
+        },
+        {
+          "slot_id": "s06_sh19",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 570,
+            "width": 1109,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s06_sh20",
+          "role": "label_candidate",
+          "text": "先预测",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 98,
+            "y": 584,
+            "width": 120,
+            "height": 40
+          }
+        },
+        {
+          "slot_id": "s06_sh21",
+          "role": "label_candidate",
+          "text": "如果条件连续三次都是 True，循环体会执行几次？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 219,
+            "y": 577,
+            "width": 936,
+            "height": 53
+          }
+        },
+        {
+          "slot_id": "s06_sh22",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-02",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s06_sh23",
+          "role": "label_candidate",
+          "text": "SLIDE-06",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 7,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s07_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s07_sh3",
+          "role": "title_candidate",
+          "text": "人体 while 循环",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s07_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s07_sh5",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 156,
+            "width": 317,
+            "height": 379
+          }
+        },
+        {
+          "slot_id": "s07_sh6",
+          "role": "label_candidate",
+          "text": "DO",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 110,
+            "y": 184,
+            "width": 259,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s07_sh7",
+          "role": "label_candidate",
+          "text": "按条件牌行动；条件变为 False 时立即停下。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 112,
+            "y": 267,
+            "width": 254,
+            "height": 216
+          }
+        },
+        {
+          "slot_id": "s07_sh8",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 444,
+            "y": 165,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "slot_id": "s07_sh9",
+          "role": "label_candidate",
+          "text": "1",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 444,
+            "y": 167,
+            "width": 56,
+            "height": 46
+          }
+        },
+        {
+          "slot_id": "s07_sh10",
+          "role": "label_candidate",
+          "text": "一名学生举条件牌，另一名学生在条件为 True 时重复走一步，直到到达终点。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 520,
+            "y": 160,
+            "width": 610,
+            "height": 67
+          }
+        },
+        {
+          "slot_id": "s07_sh11",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 444,
+            "y": 253,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "slot_id": "s07_sh12",
+          "role": "label_candidate",
+          "text": "2",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 444,
+            "y": 255,
+            "width": 56,
+            "height": 46
+          }
+        },
+        {
+          "slot_id": "s07_sh13",
+          "role": "label_candidate",
+          "text": "观察：条件什么时候改变？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 520,
+            "y": 249,
+            "width": 610,
+            "height": 67
+          }
+        },
+        {
+          "slot_id": "s07_sh14",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 444,
+            "y": 342,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "slot_id": "s07_sh15",
+          "role": "label_candidate",
+          "text": "3",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 444,
+            "y": 344,
+            "width": 56,
+            "height": 46
+          }
+        },
+        {
+          "slot_id": "s07_sh16",
+          "role": "label_candidate",
+          "text": "目标：能说出循环何时停止",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 520,
+            "y": 337,
+            "width": 610,
+            "height": 67
+          }
+        },
+        {
+          "slot_id": "s07_sh17",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-02",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s07_sh18",
+          "role": "label_candidate",
+          "text": "SLIDE-07",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 8,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s08_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s08_sh3",
+          "role": "title_candidate",
+          "text": "最小代码：重复输入直到猜中",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s08_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s08_sh5",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 144,
+            "width": 797,
+            "height": 418
+          }
+        },
+        {
+          "slot_id": "s08_sh6",
+          "role": "body_candidate",
+          "text": "1  answer = 7\n2  guess = 0\n3\n4  while guess != answer:\n5      guess = int(input(\"请输入 1～10 的数字：\"))\n6\n7  print(\"猜对了！\")",
+          "paragraph_count": 7,
+          "geometry": {
+            "x": 100,
+            "y": 168,
+            "width": 751,
+            "height": 370
+          }
+        },
+        {
+          "slot_id": "s08_sh7",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 902,
+            "y": 144,
+            "width": 283,
+            "height": 418
+          }
+        },
+        {
+          "slot_id": "s08_sh8",
+          "role": "label_candidate",
+          "text": "代码来源CODE-01",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 939,
+            "y": 176,
+            "width": 211,
+            "height": 88
+          }
+        },
+        {
+          "slot_id": "s08_sh9",
+          "role": "label_candidate",
+          "text": "●  条件：guess != answer\n●  每轮更新 guess\n●  猜中后离开循环",
+          "paragraph_count": 3,
+          "geometry": {
+            "x": 929,
+            "y": 280,
+            "width": 226,
+            "height": 235
+          }
+        },
+        {
+          "slot_id": "s08_sh10",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-03",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s08_sh11",
+          "role": "label_candidate",
+          "text": "SLIDE-08",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 9,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s09_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s09_sh3",
+          "role": "title_candidate",
+          "text": "运行前先预测",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s09_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s09_sh5",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 144,
+            "width": 797,
+            "height": 418
+          }
+        },
+        {
+          "slot_id": "s09_sh6",
+          "role": "body_candidate",
+          "text": "1  answer = 7\n2  guess = 0\n3\n4  while guess != answer:\n5      guess = int(input(\"请输入 1～10 的数字：\"))\n6\n7  print(\"猜对了！\")",
+          "paragraph_count": 7,
+          "geometry": {
+            "x": 100,
+            "y": 168,
+            "width": 751,
+            "height": 370
+          }
+        },
+        {
+          "slot_id": "s09_sh7",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 902,
+            "y": 144,
+            "width": 283,
+            "height": 418
+          }
+        },
+        {
+          "slot_id": "s09_sh8",
+          "role": "label_candidate",
+          "text": "代码来源CODE-01",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 939,
+            "y": 176,
+            "width": 211,
+            "height": 88
+          }
+        },
+        {
+          "slot_id": "s09_sh9",
+          "role": "label_candidate",
+          "text": "●  输入 3 → True\n●  输入 7 → False\n●  输出：猜对了",
+          "paragraph_count": 3,
+          "geometry": {
+            "x": 929,
+            "y": 280,
+            "width": 226,
+            "height": 235
+          }
+        },
+        {
+          "slot_id": "s09_sh10",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 570,
+            "width": 1109,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s09_sh11",
+          "role": "label_candidate",
+          "text": "先预测",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 98,
+            "y": 584,
+            "width": 120,
+            "height": 40
+          }
+        },
+        {
+          "slot_id": "s09_sh12",
+          "role": "label_candidate",
+          "text": "依次输入 3、7，循环体一共执行几次？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 219,
+            "y": 577,
+            "width": 936,
+            "height": 53
+          }
+        },
+        {
+          "slot_id": "s09_sh13",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-03",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s09_sh14",
+          "role": "label_candidate",
+          "text": "SLIDE-09",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 10,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s10_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s10_sh3",
+          "role": "title_candidate",
+          "text": "互动实践：加入大小提示",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s10_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s10_sh5",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 156,
+            "width": 317,
+            "height": 379
+          }
+        },
+        {
+          "slot_id": "s10_sh6",
+          "role": "label_candidate",
+          "text": "DO",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 110,
+            "y": 184,
+            "width": 259,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s10_sh7",
+          "role": "label_candidate",
+          "text": "大小判断应该放在 while 的里面还是外面？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 112,
+            "y": 267,
+            "width": 254,
+            "height": 216
+          }
+        },
+        {
+          "slot_id": "s10_sh8",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 444,
+            "y": 165,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "slot_id": "s10_sh9",
+          "role": "label_candidate",
+          "text": "1",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 444,
+            "y": 167,
+            "width": 56,
+            "height": 46
+          }
+        },
+        {
+          "slot_id": "s10_sh10",
+          "role": "label_candidate",
+          "text": "把 if / elif 放进循环体",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 520,
+            "y": 160,
+            "width": 610,
+            "height": 67
+          }
+        },
+        {
+          "slot_id": "s10_sh11",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 444,
+            "y": 253,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "slot_id": "s10_sh12",
+          "role": "label_candidate",
+          "text": "2",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 444,
+            "y": 255,
+            "width": 56,
+            "height": 46
+          }
+        },
+        {
+          "slot_id": "s10_sh13",
+          "role": "label_candidate",
+          "text": "每次输入后给出大小提示",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 520,
+            "y": 249,
+            "width": 610,
+            "height": 67
+          }
+        },
+        {
+          "slot_id": "s10_sh14",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 444,
+            "y": 342,
+            "width": 56,
+            "height": 56
+          }
+        },
+        {
+          "slot_id": "s10_sh15",
+          "role": "label_candidate",
+          "text": "3",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 444,
+            "y": 344,
+            "width": 56,
+            "height": 46
+          }
+        },
+        {
+          "slot_id": "s10_sh16",
+          "role": "label_candidate",
+          "text": "用偏小、偏大、正确三类输入测试",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 520,
+            "y": 337,
+            "width": 610,
+            "height": 67
+          }
+        },
+        {
+          "slot_id": "s10_sh17",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-04",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s10_sh18",
+          "role": "label_candidate",
+          "text": "SLIDE-10",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 11,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s11_sh2",
+          "role": "title_candidate",
+          "text": "?",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 79,
+            "y": 53,
+            "width": 106,
+            "height": 106
+          }
+        },
+        {
+          "slot_id": "s11_sh3",
+          "role": "title_candidate",
+          "text": "调试挑战：为什么它停不下来？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 175,
+            "y": 50,
+            "width": 998,
+            "height": 101
+          }
+        },
+        {
+          "slot_id": "s11_sh4",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 96,
+            "y": 180,
+            "width": 1087,
+            "height": 197
+          }
+        },
+        {
+          "slot_id": "s11_sh5",
+          "role": "label_candidate",
+          "text": "先检查哪一项：条件、缩进，还是变量更新？",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 139,
+            "y": 206,
+            "width": 998,
+            "height": 139
+          }
+        },
+        {
+          "slot_id": "s11_sh6",
+          "role": "label_candidate",
+          "text": "●  把 while 写成 if，导致代码只判断一次\n●  忘记给循环体缩进\n●  条件永远为 True，形成无限循环",
+          "paragraph_count": 3,
+          "geometry": {
+            "x": 130,
+            "y": 411,
+            "width": 1018,
+            "height": 120
+          }
+        },
+        {
+          "slot_id": "s11_sh7",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-04",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s11_sh8",
+          "role": "label_candidate",
+          "text": "SLIDE-11",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 12,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s12_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s12_sh3",
+          "role": "title_candidate",
+          "text": "完整版本：加入大小提示",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s12_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s12_sh5",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 144,
+            "width": 797,
+            "height": 418
+          }
+        },
+        {
+          "slot_id": "s12_sh6",
+          "role": "body_candidate",
+          "text": "1  answer = 7\n2  guess = 0\n3\n4  while guess != answer:\n5      guess = int(input(\"请输入 1～10 的数字：\"))\n6      if guess < answer:\n7          print(\"太小了\")\n8      elif guess > answer:\n9          print(\"太大了\")\n10\n11  print(\"猜对了！\")",
+          "paragraph_count": 11,
+          "geometry": {
+            "x": 100,
+            "y": 168,
+            "width": 751,
+            "height": 370
+          }
+        },
+        {
+          "slot_id": "s12_sh7",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 902,
+            "y": 144,
+            "width": 283,
+            "height": 418
+          }
+        },
+        {
+          "slot_id": "s12_sh8",
+          "role": "label_candidate",
+          "text": "代码来源CODE-02",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 939,
+            "y": 176,
+            "width": 211,
+            "height": 88
+          }
+        },
+        {
+          "slot_id": "s12_sh9",
+          "role": "label_candidate",
+          "text": "●  循环读取输入\n●  if / elif 给出反馈\n●  猜中后退出并祝贺",
+          "paragraph_count": 3,
+          "geometry": {
+            "x": 929,
+            "y": 280,
+            "width": 226,
+            "height": 235
+          }
+        },
+        {
+          "slot_id": "s12_sh10",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-05",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s12_sh11",
+          "role": "label_candidate",
+          "text": "SLIDE-12",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 13,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s13_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s13_sh3",
+          "role": "title_candidate",
+          "text": "学生动手：完成并测试游戏",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s13_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s13_sh5",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 86,
+            "y": 158,
+            "width": 672,
+            "height": 379
+          }
+        },
+        {
+          "slot_id": "s13_sh6",
+          "role": "label_candidate",
+          "text": "YOUR MISSION",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 123,
+            "y": 190,
+            "width": 384,
+            "height": 43
+          }
+        },
+        {
+          "slot_id": "s13_sh7",
+          "role": "label_candidate",
+          "text": "交换游戏，用偏小、偏大、正确三类输入测试，并记录一次发现。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 123,
+            "y": 240,
+            "width": 593,
+            "height": 202
+          }
+        },
+        {
+          "slot_id": "s13_sh8",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 792,
+            "y": 158,
+            "width": 389,
+            "height": 379
+          }
+        },
+        {
+          "slot_id": "s13_sh9",
+          "role": "label_candidate",
+          "text": "完成检查",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 828,
+            "y": 190,
+            "width": 315,
+            "height": 50
+          }
+        },
+        {
+          "slot_id": "s13_sh10",
+          "role": "label_candidate",
+          "text": "●  测试偏小输入\n●  测试偏大输入\n●  测试正确输入",
+          "paragraph_count": 3,
+          "geometry": {
+            "x": 828,
+            "y": 264,
+            "width": 307,
+            "height": 221
+          }
+        },
+        {
+          "slot_id": "s13_sh11",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 82,
+            "y": 570,
+            "width": 1109,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s13_sh12",
+          "role": "label_candidate",
+          "text": "动手做",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 98,
+            "y": 584,
+            "width": 120,
+            "height": 40
+          }
+        },
+        {
+          "slot_id": "s13_sh13",
+          "role": "label_candidate",
+          "text": "完成后与同伴交换测试，并记录一个发现。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 219,
+            "y": 577,
+            "width": 936,
+            "height": 53
+          }
+        },
+        {
+          "slot_id": "s13_sh14",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-05",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s13_sh15",
+          "role": "label_candidate",
+          "text": "SLIDE-13",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 14,
+      "page_type": "content_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s14_sh2",
+          "role": "title_candidate",
+          "text": "记住这三件事",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 86,
+            "y": 60,
+            "width": 1094,
+            "height": 86
+          }
+        },
+        {
+          "slot_id": "s14_sh3",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 96,
+            "y": 173,
+            "width": 75,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s14_sh4",
+          "role": "label_candidate",
+          "text": "1",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 96,
+            "y": 176,
+            "width": 75,
+            "height": 62
+          }
+        },
+        {
+          "slot_id": "s14_sh5",
+          "role": "label_candidate",
+          "text": "while 循环会在条件为 True 时重复执行一组代码。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 197,
+            "y": 171,
+            "width": 926,
+            "height": 79
+          }
+        },
+        {
+          "slot_id": "s14_sh6",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 96,
+            "y": 293,
+            "width": 75,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s14_sh7",
+          "role": "label_candidate",
+          "text": "2",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 96,
+            "y": 296,
+            "width": 75,
+            "height": 62
+          }
+        },
+        {
+          "slot_id": "s14_sh8",
+          "role": "label_candidate",
+          "text": "循环条件决定循环是否继续执行，每次循环前都会重新判断。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 197,
+            "y": 291,
+            "width": 926,
+            "height": 79
+          }
+        },
+        {
+          "slot_id": "s14_sh9",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 96,
+            "y": 413,
+            "width": 75,
+            "height": 75
+          }
+        },
+        {
+          "slot_id": "s14_sh10",
+          "role": "label_candidate",
+          "text": "3",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 96,
+            "y": 416,
+            "width": 75,
+            "height": 62
+          }
+        },
+        {
+          "slot_id": "s14_sh11",
+          "role": "label_candidate",
+          "text": "循环变量是在循环过程中被更新、并帮助循环最终停止的变量。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 197,
+            "y": 411,
+            "width": 926,
+            "height": 79
+          }
+        },
+        {
+          "slot_id": "s14_sh12",
+          "role": "label_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 96,
+            "y": 545,
+            "width": 1085,
+            "height": 72
+          }
+        },
+        {
+          "slot_id": "s14_sh13",
+          "role": "label_candidate",
+          "text": "用一句话说明 while 循环何时继续、何时停止。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 130,
+            "y": 560,
+            "width": 1018,
+            "height": 40
+          }
+        },
+        {
+          "slot_id": "s14_sh14",
+          "role": "label_candidate",
+          "text": "SLIDE-14",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1094,
+            "y": 674,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    },
+    {
+      "slide_index": 15,
+      "page_type": "ending_candidate",
+      "text_blocks": [
+        {
+          "slot_id": "s15_sh2",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 50,
+            "y": 43,
+            "width": 12,
+            "height": 69
+          }
+        },
+        {
+          "slot_id": "s15_sh3",
+          "role": "title_candidate",
+          "text": "课后挑战：让游戏更完整",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 27,
+            "width": 1123,
+            "height": 94
+          }
+        },
+        {
+          "slot_id": "s15_sh4",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 75,
+            "y": 122,
+            "width": 1123,
+            "height": 2
+          }
+        },
+        {
+          "slot_id": "s15_sh5",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 86,
+            "y": 158,
+            "width": 672,
+            "height": 379
+          }
+        },
+        {
+          "slot_id": "s15_sh6",
+          "role": "label_candidate",
+          "text": "YOUR MISSION",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 123,
+            "y": 190,
+            "width": 384,
+            "height": 43
+          }
+        },
+        {
+          "slot_id": "s15_sh7",
+          "role": "label_candidate",
+          "text": "在完整游戏中增加猜测次数统计，并在猜中后显示次数。",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 123,
+            "y": 240,
+            "width": 593,
+            "height": 202
+          }
+        },
+        {
+          "slot_id": "s15_sh8",
+          "role": "title_candidate",
+          "text": "",
+          "paragraph_count": 0,
+          "geometry": {
+            "x": 792,
+            "y": 158,
+            "width": 389,
+            "height": 379
+          }
+        },
+        {
+          "slot_id": "s15_sh9",
+          "role": "label_candidate",
+          "text": "完成检查",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 828,
+            "y": 190,
+            "width": 315,
+            "height": 50
+          }
+        },
+        {
+          "slot_id": "s15_sh10",
+          "role": "label_candidate",
+          "text": "●  保留原有功能\n●  说明你新增了什么",
+          "paragraph_count": 2,
+          "geometry": {
+            "x": 828,
+            "y": 264,
+            "width": 307,
+            "height": 221
+          }
+        },
+        {
+          "slot_id": "s15_sh11",
+          "role": "label_candidate",
+          "text": "LessonCraft AI · STEP-06",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 75,
+            "y": 677,
+            "width": 422,
+            "height": 21
+          }
+        },
+        {
+          "slot_id": "s15_sh12",
+          "role": "label_candidate",
+          "text": "SLIDE-15",
+          "paragraph_count": 1,
+          "geometry": {
+            "x": 1099,
+            "y": 677,
+            "width": 96,
+            "height": 21
+          }
+        }
+      ],
+      "tables": [],
+      "charts": [],
+      "diagrams": [],
+      "images": [],
+      "ignored": [],
+      "needs_confirmation": []
+    }
+  ]
+}

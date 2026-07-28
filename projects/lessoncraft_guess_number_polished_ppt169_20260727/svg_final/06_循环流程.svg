@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF" />
+  <path id="top-field" data-pptx-role="decoration" d="M826 0 H1280 V170 C1120 136 988 180 826 110 Z" fill="#DCEEFA" />
+  <g id="header" data-pptx-bounds="48 34 940 84">
+    <rect x="48" y="42" width="12" height="62" rx="6" fill="#FFC444" />
+    <text x="82" y="92" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">先判断，再执行，再回去</text>
+  </g>
+  <g id="step-one" data-pptx-bounds="54 160 330 214">
+    <rect x="54" y="160" width="330" height="214" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2" />
+    <circle cx="114" cy="216" r="34" fill="#FFC444" />
+    <text x="101" y="230" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">1</text>
+    <text x="92" y="312" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">判断循环条件</text>
+  </g>
+  <g id="arrow-one" data-pptx-bounds="396 218 70 62">
+    <text x="402" y="264" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#2B8F67">→</text>
+  </g>
+  <g id="step-two" data-pptx-bounds="474 160 330 214">
+    <rect x="486" y="172" width="318" height="202" rx="16" fill="#B9D8ED" />
+    <rect x="474" y="160" width="318" height="202" rx="16" fill="#18314E" />
+    <circle cx="534" cy="216" r="34" fill="#FFC444" />
+    <text x="521" y="230" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">2</text>
+    <text x="512" y="302" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">执行缩进代码</text>
+  </g>
+  <g id="arrow-two" data-pptx-bounds="816 218 70 62">
+    <text x="822" y="264" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#2B8F67">→</text>
+  </g>
+  <g id="step-three" data-pptx-bounds="894 160 330 214">
+    <rect x="894" y="160" width="330" height="214" rx="16" fill="#D9F0E6" />
+    <circle cx="954" cy="216" r="34" fill="#2B8F67" />
+    <text x="941" y="230" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">3</text>
+    <text fill="#18314E" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="32" x="932" y="286">回到条件</text><text fill="#18314E" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="32" x="932" y="332">再次判断</text></g>
+  <g id="prediction" data-pptx-bounds="96 452 1088 132">
+    <rect x="96" y="452" width="1088" height="132" rx="16" fill="#FFC444" />
+    
+  <g transform="translate(130, 482) scale(2.33333)" fill="#18314E">
+    <path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" />
+    <path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" />
+    <path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" />
+    <path d="M4.893 4.893a1 1 0 0 1 1.32 -.083l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 0 -1.414z" />
+    <path d="M17.693 4.893a1 1 0 0 1 1.497 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7z" />
+    <path d="M14 18a1 1 0 0 1 1 1a3 3 0 0 1 -6 0a1 1 0 0 1 .883 -.993l.117 -.007h4z" />
+    <path d="M12 6a6 6 0 0 1 3.6 10.8a1 1 0 0 1 -.471 .192l-.129 .008h-6a1 1 0 0 1 -.6 -.2a6 6 0 0 1 3.6 -10.8z" />
+  </g>
+    <rect x="210" y="476" width="126" height="54" rx="16" fill="#18314E" />
+    <text x="228" y="512" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">先预测</text>
+    <text x="366" y="518" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">如果条件连续三次都是 True，循环体会执行几次？</text>
+  </g>
+  <g id="footer" data-pptx-bounds="48 660 1190 40">
+    <text x="48" y="692" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="22" fill="#5D7080">LessonCraft AI · STEP-02</text>
+    <text x="1130" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-06</text>
+  </g>
+</svg>

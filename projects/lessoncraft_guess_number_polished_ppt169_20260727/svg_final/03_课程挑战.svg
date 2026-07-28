@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="section">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF" />
+  <path id="soft-field" data-pptx-role="decoration" d="M0 520 C210 440 330 510 500 720 L0 720 Z" fill="#DCEEFA" />
+  <g id="header" data-pptx-bounds="64 52 1100 118">
+    <text x="64" y="80" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2" fill="#2B8F67">COURSE CHALLENGE</text>
+    <text x="64" y="148" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">今天的挑战：猜中前一直继续</text>
+  </g>
+  <g id="challenge-one" data-pptx-bounds="64 228 354 244">
+    <rect x="76" y="240" width="342" height="232" rx="16" fill="#C9DFEF" />
+    <rect x="64" y="228" width="342" height="232" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2" />
+    <circle cx="122" cy="290" r="34" fill="#FFC444" />
+    <text x="98" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">01</text>
+    <rect x="106" y="353" width="230" height="8" rx="4" fill="#DCEEFA" />
+    <text x="104" y="410" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">允许重复输入</text>
+  </g>
+  <g id="challenge-two" data-pptx-bounds="469 228 354 244">
+    <rect x="481" y="240" width="342" height="232" rx="16" fill="#C9DFEF" />
+    <rect x="469" y="228" width="342" height="232" rx="16" fill="#18314E" />
+    <circle cx="527" cy="290" r="34" fill="#FFC444" />
+    <text x="503" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">02</text>
+    <rect x="511" y="353" width="230" height="8" rx="4" fill="#52718B" />
+    <text x="509" y="410" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">每次给出大小提示</text>
+  </g>
+  <g id="challenge-three" data-pptx-bounds="874 228 342 244">
+    <rect x="886" y="240" width="330" height="232" rx="16" fill="#C9DFEF" />
+    <rect x="874" y="228" width="330" height="232" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2" />
+    <circle cx="932" cy="290" r="34" fill="#2B8F67" />
+    <text x="908" y="304" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">03</text>
+    <rect x="916" y="353" width="230" height="8" rx="4" fill="#DCEEFA" />
+    <text fill="#232931" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="32" x="914" y="397">猜中后停止</text><text fill="#232931" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="32" x="914" y="443">并祝贺</text></g>
+  <g id="progress-track" data-pptx-bounds="334 534 612 42">
+    <line x1="372" y1="555" x2="908" y2="555" stroke="#B9D8ED" stroke-width="8" stroke-linecap="round" />
+    <circle cx="372" cy="555" r="18" fill="#FFC444" />
+    <circle cx="640" cy="555" r="18" fill="#18314E" />
+    <circle cx="908" cy="555" r="18" fill="#2B8F67" />
+  </g>
+  <g id="footer" data-pptx-bounds="1090 660 142 40">
+    <text x="1122" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-03</text>
+  </g>
+</svg>

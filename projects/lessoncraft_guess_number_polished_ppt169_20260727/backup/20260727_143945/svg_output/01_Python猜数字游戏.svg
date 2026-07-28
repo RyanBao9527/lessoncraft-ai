@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="cover">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF"/>
+  <circle id="accent-disc" data-pptx-role="decoration" cx="1190" cy="66" r="176" fill="#DCEEFA"/>
+  <circle id="accent-dot" data-pptx-role="decoration" cx="1118" cy="58" r="18" fill="#FFC444"/>
+  <g id="hero-stage" data-pptx-bounds="96 86 1088 548">
+    <rect x="108" y="98" width="1088" height="548" rx="16" fill="#B9D8ED"/>
+    <rect x="96" y="86" width="1088" height="548" rx="16" fill="#18314E"/>
+    <rect x="96" y="86" width="1088" height="72" rx="16" fill="#244765"/>
+    <circle cx="136" cy="122" r="8" fill="#FFC444"/>
+    <circle cx="164" cy="122" r="8" fill="#2B8F67"/>
+    <circle cx="192" cy="122" r="8" fill="#DCEEFA"/>
+    <rect x="236" y="116" width="240" height="12" rx="6" fill="#52718B"/>
+    <rect x="236" y="116" width="148" height="12" rx="6" fill="#FFC444"/>
+  </g>
+  <g id="title-block" data-pptx-bounds="168 186 960 264">
+    <text x="184" y="250" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">Python 猜数字游戏：<tspan x="184" dy="74">用 while 让游戏继续</tspan></text>
+    <rect x="184" y="365" width="720" height="2" fill="#52718B"/>
+    <text x="184" y="420" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="44" font-weight="700" fill="#FFC444">Python · 10～12 岁理解并使用 while 循环</text>
+  </g>
+  <g id="tagline" data-pptx-bounds="168 476 720 72">
+    <rect x="184" y="476" width="692" height="72" rx="16" fill="#244765" stroke="#52718B" stroke-width="2"/>
+    <circle cx="222" cy="512" r="12" fill="#2B8F67"/>
+    <text x="252" y="524" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">从问题出发 · 用代码验证 · 完成作品</text>
+  </g>
+  <g id="game-motif" data-pptx-bounds="914 442 198 130">
+    <rect x="938" y="466" width="150" height="82" rx="16" fill="#FFC444"/>
+    <circle cx="980" cy="507" r="12" fill="#18314E"/>
+    <circle cx="1047" cy="494" r="8" fill="#2B8F67"/>
+    <circle cx="1065" cy="514" r="8" fill="#18314E"/>
+    <rect x="965" y="503" width="30" height="8" rx="4" fill="#18314E"/>
+    <rect x="976" y="492" width="8" height="30" rx="4" fill="#18314E"/>
+  </g>
+</svg>

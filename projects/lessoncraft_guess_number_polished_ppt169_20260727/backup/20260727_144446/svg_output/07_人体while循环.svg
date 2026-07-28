@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF"/>
+  <g id="header" data-pptx-bounds="48 34 740 84">
+    <rect x="48" y="42" width="12" height="62" rx="6" fill="#2B8F67"/>
+    <text x="82" y="92" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">人体 while 循环</text>
+  </g>
+  <g id="do-card" data-pptx-bounds="48 146 470 444">
+    <rect x="60" y="158" width="458" height="432" rx="16" fill="#C9DFEF"/>
+    <rect x="48" y="146" width="458" height="432" rx="16" fill="#18314E"/>
+    <circle cx="106" cy="204" r="34" fill="#FFC444"/>
+    <text x="93" y="218" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">1</text>
+    <rect x="158" y="176" width="136" height="56" rx="16" fill="#FFC444"/>
+    <text x="195" y="216" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">DO</text>
+    <use data-icon="tabler-filled/device-gamepad-2" x="392" y="174" width="64" height="64" fill="#FFC444"/>
+    <text x="88" y="296" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">一名学生举条件牌，另一名<tspan x="88" dy="48">学生在条件为 True 时重复</tspan><tspan x="88" dy="48">走一步，直到到达终点。</tspan></text>
+    <rect x="88" y="452" width="378" height="102" rx="16" fill="#244765"/>
+    <text x="110" y="492" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="30" font-weight="700" fill="#FFC444">观察：条件什么时候<tspan x="110" dy="38">改变？</tspan></text>
+  </g>
+  <g id="action-step" data-pptx-bounds="558 146 674 188">
+    <rect x="558" y="146" width="674" height="188" rx="16" fill="#DCEEFA"/>
+    <circle cx="620" cy="208" r="34" fill="#18314E"/>
+    <text x="607" y="222" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="684" y="196" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">按条件牌行动；条件变为 False 时<tspan x="684" dy="48">立即停下。</tspan></text>
+  </g>
+  <g id="goal-step" data-pptx-bounds="558 370 674 188">
+    <rect x="570" y="382" width="662" height="176" rx="16" fill="#C9DFEF"/>
+    <rect x="558" y="370" width="662" height="176" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2"/>
+    <circle cx="620" cy="432" r="34" fill="#2B8F67"/>
+    <text x="607" y="446" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="684" y="444" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">目标：能说出循环何时停止</text>
+  </g>
+  <g id="footer" data-pptx-bounds="48 660 1190 40">
+    <text x="48" y="692" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="22" fill="#5D7080">LessonCraft AI · STEP-02</text>
+    <text x="1130" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-07</text>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="ending">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF"/>
+  <path id="closing-field" data-pptx-role="decoration" d="M0 0 H420 C330 160 350 322 0 442 Z" fill="#DCEEFA"/>
+  <circle id="closing-disc" data-pptx-role="decoration" cx="1184" cy="638" r="210" fill="#DCEEFA"/>
+  <g id="header" data-pptx-bounds="48 34 1060 84">
+    <rect x="48" y="42" width="12" height="62" rx="6" fill="#FFC444"/>
+    <text x="82" y="92" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">课后挑战：让游戏更完整</text>
+  </g>
+  <g id="mission-card" data-pptx-bounds="48 154 686 376">
+    <rect x="60" y="166" width="674" height="364" rx="16" fill="#B9D8ED"/>
+    <rect x="48" y="154" width="674" height="364" rx="16" fill="#18314E"/>
+    <text x="90" y="216" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2" fill="#FFC444">YOUR MISSION</text>
+    <use data-icon="tabler-filled/device-gamepad-2" x="614" y="186" width="64" height="64" fill="#FFC444"/>
+    <text x="90" y="312" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">在完整游戏中增加猜测<tspan x="90" dy="62">次数统计，并在猜中后显示次数。</tspan></text>
+    <rect x="90" y="446" width="586" height="28" rx="14" fill="#244765"/>
+    <rect x="90" y="446" width="338" height="28" rx="14" fill="#FFC444"/>
+    <circle cx="428" cy="460" r="18" fill="#2B8F67"/>
+  </g>
+  <g id="completion-card" data-pptx-bounds="774 154 458 376">
+    <rect x="774" y="154" width="458" height="364" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2"/>
+    <use data-icon="tabler-filled/check" x="816" y="192" width="58" height="58" fill="#2B8F67"/>
+    <text x="900" y="234" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">完成检查</text>
+    <text x="818" y="330" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">●  保留原有功能</text>
+    <text x="818" y="414" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">●  说明你新增了什么</text>
+  </g>
+  <g id="closing-progress" data-pptx-bounds="318 570 644 48">
+    <line x1="350" y1="594" x2="930" y2="594" stroke="#B9D8ED" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="350" cy="594" r="18" fill="#FFC444"/>
+    <circle cx="640" cy="594" r="18" fill="#18314E"/>
+    <circle cx="930" cy="594" r="18" fill="#2B8F67"/>
+  </g>
+  <g id="footer" data-pptx-bounds="48 660 1190 40">
+    <text x="48" y="692" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="22" fill="#5D7080">LessonCraft AI · STEP-06</text>
+    <text x="1130" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-15</text>
+  </g>
+</svg>

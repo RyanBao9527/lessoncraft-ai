@@ -1,0 +1,4 @@
+interface:
+  display_name: "LessonCraft AI"
+  short_description: "从统一课程母稿生成一致的教案、课件、代码与练习，并支持检查和导出"
+  default_prompt: "使用 $lessoncraft-ai 为我的少儿编程课程生成一套可上课、可检查、可导出的完整教学包。"

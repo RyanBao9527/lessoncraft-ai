@@ -1,0 +1,96 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "first-page",
+  "target": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "1e2738c67319cdd18f53fb29a260a130a764806f22417c3cde92043e4ad78a2d",
+    "file_count": 1,
+    "files": [
+      {
+        "file": "01_Python猜数字游戏.svg",
+        "sha256": "e437cd4ad842295e299b8d5c6620e2e81de463c2db82cf7d150c9c3eee882bc6"
+      }
+    ]
+  },
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "warnings": 0,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 0,
+      "issues": []
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {
+      "#244765": [
+        "01_Python猜数字游戏.svg"
+      ],
+      "#52718B": [
+        "01_Python猜数字游戏.svg"
+      ],
+      "#B9D8ED": [
+        "01_Python猜数字游戏.svg"
+      ],
+      "#FFFFFF": [
+        "01_Python猜数字游戏.svg"
+      ]
+    },
+    "fonts": {},
+    "sizes": {}
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_Python猜数字游戏.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/01_Python猜数字游戏.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 3,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#244765",
+            "#52718B",
+            "#B9D8ED",
+            "#FFFFFF"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "e437cd4ad842295e299b8d5c6620e2e81de463c2db82cf7d150c9c3eee882bc6"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+[14:29:10] [INFO] svg_editor: running at http://127.0.0.1:5050 (live preview (auto-startup))
+[14:29:10] [INFO] svg_editor: project: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727
+[14:29:10] [INFO] svg_editor: svg_output: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output (0 slides)
+[14:29:10] [INFO] svg_editor: idle timeout: 7200s (0 = disabled)
+ * Serving Flask app 'server'
+ * Debug mode: off
+Operation not permitted
+[14:29:22] [INFO] svg_editor: running at http://127.0.0.1:5050 (live preview (auto-startup))
+[14:29:22] [INFO] svg_editor: project: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727
+[14:29:22] [INFO] svg_editor: svg_output: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output (0 slides)
+[14:29:22] [INFO] svg_editor: idle timeout: 7200s (0 = disabled)
+ * Serving Flask app 'server'
+ * Debug mode: off
+[14:29:26] [INFO] svg_editor: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+[14:29:26] [INFO] svg_editor: [33mPress CTRL+C to quit[0m
+[14:29:53] [INFO] svg_editor: 127.0.0.1 - - [27/Jul/2026 14:29:53] "GET /api/health HTTP/1.1" 200 -
+[14:51:50] [INFO] svg_editor: received signal 15, exiting
+[18:52:09] [INFO] svg_editor: running at http://127.0.0.1:5050 (live preview (auto-startup))
+[18:52:09] [INFO] svg_editor: project: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727
+[18:52:09] [INFO] svg_editor: svg_output: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output (15 slides)
+[18:52:09] [INFO] svg_editor: idle timeout: 7200s (0 = disabled)
+ * Serving Flask app 'server'
+ * Debug mode: off
+Operation not permitted
+[18:52:30] [INFO] svg_editor: running at http://127.0.0.1:5050 (live preview (auto-startup))
+[18:52:30] [INFO] svg_editor: project: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727
+[18:52:30] [INFO] svg_editor: svg_output: /Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output (15 slides)
+[18:52:30] [INFO] svg_editor: idle timeout: 7200s (0 = disabled)
+ * Serving Flask app 'server'
+ * Debug mode: off
+[18:52:30] [INFO] svg_editor: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+[18:52:30] [INFO] svg_editor: [33mPress CTRL+C to quit[0m
+[18:59:51] [INFO] svg_editor: received signal 15, exiting

@@ -1,0 +1,233 @@
+{
+  "schema": "ppt-master.pptx-postflight-report.v1",
+  "status": "passed-with-warnings",
+  "output": {
+    "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/exports/lessoncraft_guess_number_polished_20260727_143945.pptx",
+    "bytes": 83460
+  },
+  "source": {
+    "svg_slide_count": 15,
+    "layout_definition_count": 0,
+    "fingerprint": {
+      "algorithm": "sha256",
+      "digest": "528227f77df684bf1f63cecdb49721e2e19c68e1302f2d2171eda2a401e41cf7",
+      "file_count": 15,
+      "files": [
+        {
+          "file": "01_Python猜数字游戏.svg",
+          "sha256": "e437cd4ad842295e299b8d5c6620e2e81de463c2db82cf7d150c9c3eee882bc6"
+        },
+        {
+          "file": "02_情境导入.svg",
+          "sha256": "1f52816b4612140f2004295f585ce32e146644aeb31e37c20208683c9cb71ff7"
+        },
+        {
+          "file": "03_课程挑战.svg",
+          "sha256": "1099c496cbdace3c9c1a7979b55e3e44dc0cc6f5d7f73ebbd5aebcc58e4614ee"
+        },
+        {
+          "file": "04_旧工具够用吗.svg",
+          "sha256": "775cce1b5a488194368cf6b84819ebc76b7790b01804921ee46f3a6b93a11cba"
+        },
+        {
+          "file": "05_while循环概念.svg",
+          "sha256": "b2a16df380e13c2b9aafc6d63b5860901877f7dd82857f43cce13d1d90d395fe"
+        },
+        {
+          "file": "06_循环流程.svg",
+          "sha256": "03c92c44efdc661a3a6716570a6a673b71f004a3913dfe356004702d61c4602f"
+        },
+        {
+          "file": "07_人体while循环.svg",
+          "sha256": "264aa22a2d7e31dd43fe3351b6379bb37f129f5bf16e5ed758473a10354721f6"
+        },
+        {
+          "file": "08_最小代码.svg",
+          "sha256": "91a93200a5d97d5d01aa67b8065e885cc7e3a447644105b2ebafd272b2555c47"
+        },
+        {
+          "file": "09_运行前先预测.svg",
+          "sha256": "8cedbe7b948f3aaed2880134dabe616406e4133c636a8db3342a5d320db4c8b8"
+        },
+        {
+          "file": "10_互动实践.svg",
+          "sha256": "919d3ef4ce34fcd65adedc9a21e06bcac47a1540212776a38abdf56279dc6735"
+        },
+        {
+          "file": "11_调试挑战.svg",
+          "sha256": "b7a7e8b9dd9794b30076b5dc24cc9b4000fd10922fc0a99f1d3e47784c343392"
+        },
+        {
+          "file": "12_完整版本.svg",
+          "sha256": "059ce07824dd45855eed2d707d6668b9c734b564c12b9a66948c644ddb56f755"
+        },
+        {
+          "file": "13_学生动手.svg",
+          "sha256": "2c1dc6d8abc72dd65fabdd0f7c0485388de9c6abe762af74ac7ad68e0f55cdad"
+        },
+        {
+          "file": "14_课堂总结.svg",
+          "sha256": "e622a297f12c29f69386f8dd9dd7feef792f0ebe4eaaff7f6512124c2d777e20"
+        },
+        {
+          "file": "15_课后挑战.svg",
+          "sha256": "c70f3f3a61eb6c15dc3402f03cc0af480fc479f57d1abc9b2bf6dd7198e58427"
+        }
+      ]
+    }
+  },
+  "package": {
+    "zip_integrity": "passed",
+    "corrupt_member": null,
+    "slides": 15,
+    "notes": 15,
+    "masters": 1,
+    "layouts": 1
+  },
+  "checks": {
+    "zip_integrity": "passed",
+    "slide_count": "passed",
+    "internal_relationships": "enforced-at-build",
+    "structured_package": "not-applicable",
+    "transitions": "enforced-at-build",
+    "animations": "enforced-at-build",
+    "quality_gate": "passed",
+    "quality_warnings": "warning",
+    "template_tokens": "passed",
+    "external_images": "passed",
+    "font_portability": "passed"
+  },
+  "quality": {
+    "status": "loaded",
+    "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/validation/svg_quality_report.json",
+    "schema": "ppt-master.svg-quality-report.v1",
+    "stage": "final",
+    "source_match": "passed",
+    "source_fingerprint": {
+      "algorithm": "sha256",
+      "digest": "528227f77df684bf1f63cecdb49721e2e19c68e1302f2d2171eda2a401e41cf7",
+      "file_count": 15,
+      "files": [
+        {
+          "file": "01_Python猜数字游戏.svg",
+          "sha256": "e437cd4ad842295e299b8d5c6620e2e81de463c2db82cf7d150c9c3eee882bc6"
+        },
+        {
+          "file": "02_情境导入.svg",
+          "sha256": "1f52816b4612140f2004295f585ce32e146644aeb31e37c20208683c9cb71ff7"
+        },
+        {
+          "file": "03_课程挑战.svg",
+          "sha256": "1099c496cbdace3c9c1a7979b55e3e44dc0cc6f5d7f73ebbd5aebcc58e4614ee"
+        },
+        {
+          "file": "04_旧工具够用吗.svg",
+          "sha256": "775cce1b5a488194368cf6b84819ebc76b7790b01804921ee46f3a6b93a11cba"
+        },
+        {
+          "file": "05_while循环概念.svg",
+          "sha256": "b2a16df380e13c2b9aafc6d63b5860901877f7dd82857f43cce13d1d90d395fe"
+        },
+        {
+          "file": "06_循环流程.svg",
+          "sha256": "03c92c44efdc661a3a6716570a6a673b71f004a3913dfe356004702d61c4602f"
+        },
+        {
+          "file": "07_人体while循环.svg",
+          "sha256": "264aa22a2d7e31dd43fe3351b6379bb37f129f5bf16e5ed758473a10354721f6"
+        },
+        {
+          "file": "08_最小代码.svg",
+          "sha256": "91a93200a5d97d5d01aa67b8065e885cc7e3a447644105b2ebafd272b2555c47"
+        },
+        {
+          "file": "09_运行前先预测.svg",
+          "sha256": "8cedbe7b948f3aaed2880134dabe616406e4133c636a8db3342a5d320db4c8b8"
+        },
+        {
+          "file": "10_互动实践.svg",
+          "sha256": "919d3ef4ce34fcd65adedc9a21e06bcac47a1540212776a38abdf56279dc6735"
+        },
+        {
+          "file": "11_调试挑战.svg",
+          "sha256": "b7a7e8b9dd9794b30076b5dc24cc9b4000fd10922fc0a99f1d3e47784c343392"
+        },
+        {
+          "file": "12_完整版本.svg",
+          "sha256": "059ce07824dd45855eed2d707d6668b9c734b564c12b9a66948c644ddb56f755"
+        },
+        {
+          "file": "13_学生动手.svg",
+          "sha256": "2c1dc6d8abc72dd65fabdd0f7c0485388de9c6abe762af74ac7ad68e0f55cdad"
+        },
+        {
+          "file": "14_课堂总结.svg",
+          "sha256": "e622a297f12c29f69386f8dd9dd7feef792f0ebe4eaaff7f6512124c2d777e20"
+        },
+        {
+          "file": "15_课后挑战.svg",
+          "sha256": "c70f3f3a61eb6c15dc3402f03cc0af480fc479f57d1abc9b2bf6dd7198e58427"
+        }
+      ]
+    },
+    "summary": {
+      "total": 15,
+      "passed": 12,
+      "warnings": 3,
+      "errors": 0
+    },
+    "categories": {
+      "blocking": {
+        "count": 0,
+        "issues": []
+      },
+      "introduced": {
+        "count": 3,
+        "issues": [
+          {
+            "file": "08_最小代码.svg",
+            "message": "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=226.0..306.0, 3 lines; <g id=\"code-console\"> x=82.0, y=394.0..434.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+          },
+          {
+            "file": "09_运行前先预测.svg",
+            "message": "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=210.0..286.0, 3 lines; <g id=\"code-console\"> x=82.0, y=362.0..400.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+          },
+          {
+            "file": "12_完整版本.svg",
+            "message": "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=204.0..272.0, 3 lines; <g id=\"code-console\"> x=82.0, y=476.0..510.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+          }
+        ]
+      },
+      "inherited": {
+        "count": 0,
+        "issues": []
+      },
+      "source-import": {
+        "count": 0,
+        "summary": {
+          "warning_count": 0,
+          "by_code": {}
+        }
+      }
+    }
+  },
+  "resources": {
+    "unresolved_template_tokens": [],
+    "fonts": {
+      "stacks": [
+        "Arial, sans-serif",
+        "Menlo, Consolas, Courier New, Microsoft YaHei, monospace",
+        "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+      ],
+      "generic_only_stacks": []
+    },
+    "images": {
+      "data_uri": 0,
+      "local": 0,
+      "external": 0,
+      "external_references": []
+    }
+  },
+  "backup_path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/backup/20260727_143945/svg_output",
+  "conversion_trace_path": null
+}

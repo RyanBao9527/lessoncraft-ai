@@ -1,0 +1,19 @@
+{
+  "session_id": "599b246265134f4f8a41cbf13dba61dd",
+  "status": "done",
+  "current_stage": "final",
+  "stage_skip": false,
+  "expected_stage": null,
+  "expected_stage_number": null,
+  "recommendation_stage": "stage3",
+  "recommendation_stage_number": 3,
+  "recommendation_file": "recommendations.stage3.json",
+  "recommendation_version": 1785133179.8375757,
+  "recommendation_error": null,
+  "result_stage": "final",
+  "result_stage_number": 4,
+  "result_version": 1785133288.4134512,
+  "server_port": 5050,
+  "event": "final-submitted",
+  "updated_at": "2026-07-27T14:21:28"
+}

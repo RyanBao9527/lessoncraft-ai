@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF"/>
+  <circle id="soft-disc" data-pptx-role="decoration" cx="1188" cy="596" r="210" fill="#DCEEFA"/>
+  <g id="header" data-pptx-bounds="48 34 1080 84">
+    <rect x="48" y="42" width="12" height="62" rx="6" fill="#2B8F67"/>
+    <text x="82" y="92" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">while 循环：条件为真就继续</text>
+  </g>
+  <g id="concept-card" data-pptx-bounds="48 154 650 338">
+    <rect x="60" y="166" width="638" height="326" rx="16" fill="#B9D8ED"/>
+    <rect x="48" y="154" width="638" height="326" rx="16" fill="#18314E"/>
+    <rect x="88" y="196" width="168" height="48" rx="16" fill="#FFC444"/>
+    <text x="108" y="229" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#18314E">while</text>
+    <text x="88" y="308" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">while 循环会在条件为 True 时<tspan x="88" dy="50">重复执行一组代码。</tspan></text>
+    <path d="M88 416 C210 380 336 442 460 406 C528 386 578 386 638 402" fill="none" stroke="#2B8F67" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g id="true-state" data-pptx-bounds="738 166 446 122">
+    <rect x="738" y="166" width="446" height="122" rx="16" fill="#D9F0E6"/>
+    <circle cx="790" cy="227" r="22" fill="#2B8F67"/>
+    <text x="828" y="218" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">●  条件为 True：<tspan x="828" dy="42">执行并再次判断</tspan></text>
+  </g>
+  <g id="false-state" data-pptx-bounds="738 328 446 122">
+    <rect x="738" y="328" width="446" height="122" rx="16" fill="#FFF0C5"/>
+    <circle cx="790" cy="389" r="22" fill="#FFC444"/>
+    <text x="828" y="380" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">●  条件为 False：<tspan x="828" dy="42">离开循环</tspan></text>
+  </g>
+  <g id="loop-path" data-pptx-bounds="270 524 670 70">
+    <path d="M310 558 C430 514 564 514 686 558 C772 590 850 584 902 548" fill="none" stroke="#18314E" stroke-width="6" stroke-linecap="round"/>
+    <polygon points="902,548 879,543 890,565" fill="#18314E"/>
+    <circle cx="310" cy="558" r="18" fill="#FFC444"/>
+    <circle cx="686" cy="558" r="18" fill="#2B8F67"/>
+  </g>
+  <g id="footer" data-pptx-bounds="48 660 1190 40">
+    <text x="48" y="692" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="22" fill="#5D7080">LessonCraft AI · STEP-02</text>
+    <text x="1130" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-05</text>
+  </g>
+</svg>

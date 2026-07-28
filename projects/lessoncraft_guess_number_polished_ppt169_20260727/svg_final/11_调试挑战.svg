@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF" />
+  <g id="header" data-pptx-bounds="48 34 1120 84">
+    <rect x="48" y="42" width="12" height="62" rx="6" fill="#FFC444" />
+    <text x="82" y="92" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">调试挑战：为什么它停不下来？</text>
+  </g>
+  <g id="debug-question" data-pptx-bounds="112 146 1056 210">
+    <rect x="124" y="158" width="1044" height="198" rx="16" fill="#B9D8ED" />
+    <rect x="112" y="146" width="1044" height="198" rx="16" fill="#18314E" />
+    <circle cx="210" cy="245" r="58" fill="#FFC444" />
+    <text x="193" y="265" font-family="Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">?</text>
+    
+  <g transform="translate(1060, 176) scale(2.41667)" fill="#FFC444">
+    <path d="M12 4a4 4 0 0 1 3.995 3.8l.005 .2a1 1 0 0 1 .428 .096l3.033 -1.938a1 1 0 1 1 1.078 1.684l-3.015 1.931a7.17 7.17 0 0 1 .476 2.227h3a1 1 0 0 1 0 2h-3v1a6.01 6.01 0 0 1 -.195 1.525l2.708 1.616a1 1 0 1 1 -1.026 1.718l-2.514 -1.501a6.002 6.002 0 0 1 -3.973 2.56v-5.918a1 1 0 0 0 -2 0v5.917a6.002 6.002 0 0 1 -3.973 -2.56l-2.514 1.503a1 1 0 1 1 -1.026 -1.718l2.708 -1.616a6.01 6.01 0 0 1 -.195 -1.526v-1h-3a1 1 0 0 1 0 -2h3.001v-.055a7 7 0 0 1 .474 -2.173l-3.014 -1.93a1 1 0 1 1 1.078 -1.684l3.032 1.939l.024 -.012l.068 -.027l.019 -.005l.016 -.006l.032 -.008l.04 -.013l.034 -.007l.034 -.004l.045 -.008l.015 -.001l.015 -.002l.087 -.004a4 4 0 0 1 4 -4zm0 2a2 2 0 0 0 -2 2h4a2 2 0 0 0 -2 -2z" />
+  </g>
+    <text fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="44" x="306" y="232">先检查哪一项：条件、缩进，</text><text fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="44" x="306" y="290">还是变量更新？</text></g>
+  <g id="debug-list" data-pptx-bounds="112 394 1056 206">
+    <rect x="112" y="394" width="1056" height="206" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2" />
+    <circle cx="160" cy="444" r="12" fill="#FFC444" />
+    <text x="194" y="454" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">把 while 写成 if，导致代码只判断一次</text>
+    <circle cx="160" cy="506" r="12" fill="#2B8F67" />
+    <text x="194" y="516" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">忘记给循环体缩进</text>
+    <circle cx="160" cy="568" r="12" fill="#18314E" />
+    <text x="194" y="578" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">条件永远为 True，形成无限循环</text>
+  </g>
+  <g id="footer" data-pptx-bounds="48 660 1190 40">
+    <text x="48" y="692" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="22" fill="#5D7080">LessonCraft AI · STEP-04</text>
+    <text x="1130" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-11</text>
+  </g>
+</svg>

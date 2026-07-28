@@ -1,0 +1,60 @@
+{
+  "canvas": "ppt169",
+  "audience": "10～12 岁、学过变量、input 和 if 的少儿 Python 学生。",
+  "communication_intent": "用于教师现场投屏授课；以问题、预测、代码观察和动手任务推动学生理解 while 循环并完成猜数字游戏。",
+  "audience_outcome": "学生能判断 while 循环何时继续和停止，读懂两段冻结代码，并按课堂任务完成、测试猜数字游戏。",
+  "core_message": "while 在条件为 True 时继续执行；通过更新 guess，让游戏在猜中时停止。",
+  "delivery_context": "主要用于有教师讲解的教室投屏；次要用于教师课前预览和课后复用。",
+  "artifact_afterlife": "保留为原生可编辑 PPTX，供教师继续修改、复用和归档。",
+  "content_divergence": "保持源 PPT 的全部文字、代码、页数、页序和逐页教学含义逐字不变，只重新设计视觉布局。",
+  "delivery_purpose": "presentation",
+  "page_count": "15",
+  "mode": "instructional",
+  "visual_style": "soft-rounded",
+  "color": {
+    "name": "深海蓝 × 奖励黄",
+    "palette": {
+      "background": "#F7FBFF",
+      "secondary_bg": "#DCEEFA",
+      "primary": "#18314E",
+      "accent": "#FFC444",
+      "secondary_accent": "#2B8F67",
+      "body_text": "#232931"
+    }
+  },
+  "icons": "tabler-filled",
+  "typography": {
+    "name": "清晰课堂无衬线",
+    "heading": {
+      "cjk": "Microsoft YaHei",
+      "css": "\"Microsoft YaHei\", \"PingFang SC\", Arial, sans-serif",
+      "latin": "Arial",
+      "sample_cjk": "",
+      "sample_latin": ""
+    },
+    "body": {
+      "cjk": "Microsoft YaHei",
+      "css": "\"Microsoft YaHei\", \"PingFang SC\", Arial, sans-serif",
+      "latin": "Arial",
+      "sample_cjk": "",
+      "sample_latin": ""
+    },
+    "body_size": 32,
+    "sizes": {
+      "annotation": 24,
+      "subtitle": 44,
+      "title": 56
+    },
+    "body_size_unit": "px"
+  },
+  "image_usage": [
+    "none"
+  ],
+  "image_notes": "不使用外部图片或 AI 图片；只用原生可编辑图形、箭头、卡片、代码框和少量语义图标。",
+  "formula_policy": "text-only",
+  "generation_mode": "continuous",
+  "refine_spec": false,
+  "stage": "final",
+  "status": "confirmed",
+  "confirmed_at": "2026-07-27T14:21:28"
+}

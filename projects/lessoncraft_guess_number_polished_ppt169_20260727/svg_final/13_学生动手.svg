@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF" />
+  <g id="header" data-pptx-bounds="48 34 1050 84">
+    <rect x="48" y="42" width="12" height="62" rx="6" fill="#FFC444" />
+    <text x="82" y="92" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">学生动手：完成并测试游戏</text>
+  </g>
+  <g id="mission-card" data-pptx-bounds="48 146 600 348">
+    <rect x="60" y="158" width="588" height="336" rx="16" fill="#B9D8ED" />
+    <rect x="48" y="146" width="588" height="336" rx="16" fill="#18314E" />
+    <text x="88" y="204" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="2" fill="#FFC444">YOUR MISSION</text>
+    
+  <g transform="translate(520, 176) scale(2.66667)" fill="#FFC444">
+    <path d="M15.5 4a6 6 0 0 1 5.945 5.187l1.532 7.883a3.3 3.3 0 0 1 -5.632 2.903l-3.776 -3.974l-3.14 .001l-3.719 3.916a3.3 3.3 0 0 1 -5.629 -2.92l1.634 -8.173a6 6 0 0 1 5.885 -4.823zm-7.5 3a1 1 0 0 0 -1 1v1h-1a1 1 0 1 0 0 2h1v1a1 1 0 0 0 2 0v-1h1a1 1 0 0 0 0 -2h-1v-1a1 1 0 0 0 -1 -1m10 2h-4a1 1 0 0 0 0 2h4a1 1 0 0 0 0 -2" />
+  </g>
+    <text fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="32" x="88" y="282">交换游戏，用偏小、偏大、正确</text><text fill="#FFFFFF" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="32" x="88" y="330">三类输入测试，并记录一次发现。</text><rect x="88" y="376" width="500" height="90" rx="16" fill="#244765" />
+    <text fill="#FFC444" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="30" x="108" y="412">完成后与同伴交换测试，</text><text fill="#FFC444" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-weight="700" font-size="30" x="108" y="450">并记录一个发现。</text></g>
+  <g id="completion-card" data-pptx-bounds="684 146 548 348">
+    <rect x="684" y="146" width="548" height="336" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2" />
+    
+  <g transform="translate(724, 178) scale(2.25)" fill="#2B8F67">
+    <path d="M20.707 6.293a1 1 0 0 1 0 1.414l-10 10a1 1 0 0 1 -1.414 0l-5 -5a1 1 0 0 1 1.414 -1.414l4.293 4.293l9.293 -9.293a1 1 0 0 1 1.414 0" />
+  </g>
+    <text x="804" y="218" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">完成检查</text>
+    <text x="728" y="300" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">●  测试偏小输入</text>
+    <text x="728" y="366" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">●  测试偏大输入</text>
+    <text x="728" y="432" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#232931">●  测试正确输入</text>
+  </g>
+  <g id="action-bar" data-pptx-bounds="48 530 1184 92">
+    <rect x="48" y="530" width="1184" height="92" rx="16" fill="#FFC444" />
+    <rect x="82" y="548" width="144" height="56" rx="16" fill="#18314E" />
+    <text x="106" y="586" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">动手做</text>
+    <line x1="270" y1="576" x2="1136" y2="576" stroke="#E3A82A" stroke-width="8" stroke-linecap="round" />
+    <circle cx="520" cy="576" r="15" fill="#18314E" />
+    <circle cx="820" cy="576" r="15" fill="#2B8F67" />
+  </g>
+  <g id="footer" data-pptx-bounds="48 660 1190 40">
+    <text x="48" y="692" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="22" fill="#5D7080">LessonCraft AI · STEP-05</text>
+    <text x="1130" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-13</text>
+  </g>
+</svg>

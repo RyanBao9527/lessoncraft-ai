@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="content">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#F7FBFF"/>
+  <g id="header" data-pptx-bounds="48 24 950 92">
+    <rect x="48" y="32" width="12" height="62" rx="6" fill="#2B8F67"/>
+    <text x="82" y="82" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#18314E">完整版本：加入大小提示</text>
+  </g>
+  <g id="code-console" data-pptx-bounds="48 118 824 506">
+    <rect x="60" y="130" width="812" height="494" rx="16" fill="#B9D8ED"/>
+    <rect x="48" y="118" width="812" height="494" rx="16" fill="#102536"/>
+    <rect x="48" y="118" width="812" height="54" rx="16" fill="#244765"/>
+    <circle cx="84" cy="145" r="8" fill="#FFC444"/>
+    <circle cx="110" cy="145" r="8" fill="#2B8F67"/>
+    <circle cx="136" cy="145" r="8" fill="#DCEEFA"/>
+    <use data-icon="tabler-filled/file-code" x="784" y="128" width="34" height="34" fill="#FFC444"/>
+    <text x="82" y="204" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#FFFFFF"> 1  answer = 7</text>
+    <text x="82" y="238" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#FFFFFF"> 2  guess = 0</text>
+    <text x="82" y="272" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#FFFFFF"> 3  </text>
+    <text x="82" y="306" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" font-weight="700" fill="#FFC444"> 4  while guess != answer:</text>
+    <rect x="72" y="316" width="748" height="112" rx="12" fill="#2B8F67" opacity="0.22"/>
+    <text x="82" y="340" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#FFFFFF"> 5      guess = int(input("请输入 1～10 的数字："))</text>
+    <text x="82" y="374" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#8FE0B8"> 6      if guess &lt; answer:</text>
+    <text x="82" y="408" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#FFFFFF"> 7          print("太小了")</text>
+    <text x="82" y="442" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#8FE0B8"> 8      elif guess &gt; answer:</text>
+    <text x="82" y="476" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#FFFFFF"> 9          print("太大了")</text>
+    <text x="82" y="510" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" fill="#FFFFFF">10  </text>
+    <text x="82" y="544" xml:space="preserve" font-family="Menlo, Consolas, Courier New, Microsoft YaHei, monospace" font-size="22" font-weight="700" fill="#FFC444">11  print("猜对了！")</text>
+    <text x="82" y="590" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="24" fill="#AFC8DA">代码来源</text>
+    <rect x="216" y="558" width="142" height="44" rx="16" fill="#FFC444"/>
+    <text x="234" y="589" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#18314E">CODE-02</text>
+  </g>
+  <g id="acceptance-list" data-pptx-bounds="900 118 332 336">
+    <rect x="900" y="118" width="332" height="336" rx="16" fill="#FFFFFF" stroke="#DCEEFA" stroke-width="2"/>
+    <circle cx="946" cy="184" r="22" fill="#2B8F67"/>
+    <text x="986" y="196" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">●  循环读取<tspan x="986" dy="40">输入</tspan></text>
+    <circle cx="946" cy="286" r="22" fill="#FFC444"/>
+    <text x="986" y="298" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">●  if / elif<tspan x="986" dy="40">给出反馈</tspan></text>
+    <circle cx="946" cy="388" r="22" fill="#18314E"/>
+    <text x="986" y="400" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">●  猜中后退出<tspan x="986" dy="40">并祝贺</tspan></text>
+  </g>
+  <g id="footer" data-pptx-bounds="48 660 1190 40">
+    <text x="48" y="692" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="22" fill="#5D7080">LessonCraft AI · STEP-05</text>
+    <text x="1130" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#5D7080">SLIDE-12</text>
+  </g>
+</svg>

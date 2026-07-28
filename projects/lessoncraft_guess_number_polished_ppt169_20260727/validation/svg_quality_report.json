@@ -1,0 +1,699 @@
+{
+  "schema": "ppt-master.svg-quality-report.v1",
+  "stage": "final",
+  "target": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727",
+  "source_fingerprint": {
+    "algorithm": "sha256",
+    "digest": "52814df544357bf9cddf7f0b2ad7a869cabe68ab5297985175185d66f6adca67",
+    "file_count": 15,
+    "files": [
+      {
+        "file": "01_Python猜数字游戏.svg",
+        "sha256": "1bdd52b8e9a20f4494f6ab4669651c87801788bd169a257ae74957001a9ea4d6"
+      },
+      {
+        "file": "02_情境导入.svg",
+        "sha256": "38f665af96db5d2175aca6ed312d54d0a7c401fb00b95f6a75938e51dd14219b"
+      },
+      {
+        "file": "03_课程挑战.svg",
+        "sha256": "1099c496cbdace3c9c1a7979b55e3e44dc0cc6f5d7f73ebbd5aebcc58e4614ee"
+      },
+      {
+        "file": "04_旧工具够用吗.svg",
+        "sha256": "f9cc6d3db552eb5c7fffa5206d856846497f77f3fe8ebb3bc72ca231767a09cd"
+      },
+      {
+        "file": "05_while循环概念.svg",
+        "sha256": "5631fd68558a830d1a298769fa2d1c453a2a5f7041e4a65ae4e6830f57f1db74"
+      },
+      {
+        "file": "06_循环流程.svg",
+        "sha256": "03c92c44efdc661a3a6716570a6a673b71f004a3913dfe356004702d61c4602f"
+      },
+      {
+        "file": "07_人体while循环.svg",
+        "sha256": "264aa22a2d7e31dd43fe3351b6379bb37f129f5bf16e5ed758473a10354721f6"
+      },
+      {
+        "file": "08_最小代码.svg",
+        "sha256": "e6fc4beb98b99167e3888ec380e772088d2c500a300ecb3f649634285d3e46be"
+      },
+      {
+        "file": "09_运行前先预测.svg",
+        "sha256": "8cedbe7b948f3aaed2880134dabe616406e4133c636a8db3342a5d320db4c8b8"
+      },
+      {
+        "file": "10_互动实践.svg",
+        "sha256": "129553171ae0f6b07ad5251a40d9b06e22f89b034d567781cdf5c2d3d910ffdc"
+      },
+      {
+        "file": "11_调试挑战.svg",
+        "sha256": "b9500d4f4d8355637e2f96a436fa8e0f59e52e321d3990c7b6819d26b8510d80"
+      },
+      {
+        "file": "12_完整版本.svg",
+        "sha256": "aee9c4332b99a9bc3e5059dbf34af40020546293a96e96d0b1c4300ac2f796e8"
+      },
+      {
+        "file": "13_学生动手.svg",
+        "sha256": "2c1dc6d8abc72dd65fabdd0f7c0485388de9c6abe762af74ac7ad68e0f55cdad"
+      },
+      {
+        "file": "14_课堂总结.svg",
+        "sha256": "5a9d2b9db0e34fb50075ed622c2f0d76f4cb8b020631bae344801b26b0bd667c"
+      },
+      {
+        "file": "15_课后挑战.svg",
+        "sha256": "db636ff0be73ee44338acc53dae18bfad2dcba540be64d29409954722972ca8f"
+      }
+    ]
+  },
+  "summary": {
+    "total": 15,
+    "passed": 10,
+    "warnings": 5,
+    "errors": 0
+  },
+  "issue_types": {},
+  "categories": {
+    "blocking": {
+      "count": 0,
+      "issues": []
+    },
+    "introduced": {
+      "count": 5,
+      "issues": [
+        {
+          "file": "01_Python猜数字游戏.svg",
+          "message": "Detected 1 paragraph-like line run(s) split across sibling <text> elements (<g id=\"title-block\"> x=184.0, y=254.0..330.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+        },
+        {
+          "file": "05_while循环概念.svg",
+          "message": "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"true-state\"> x=828.0, y=212.0..260.0, 2 lines; <g id=\"false-state\"> x=828.0, y=374.0..422.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+        },
+        {
+          "file": "08_最小代码.svg",
+          "message": "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=226.0..306.0, 3 lines; <g id=\"code-console\"> x=82.0, y=394.0..434.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+        },
+        {
+          "file": "09_运行前先预测.svg",
+          "message": "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=210.0..286.0, 3 lines; <g id=\"code-console\"> x=82.0, y=362.0..400.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+        },
+        {
+          "file": "12_完整版本.svg",
+          "message": "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=204.0..272.0, 3 lines; <g id=\"code-console\"> x=82.0, y=476.0..510.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+        }
+      ]
+    },
+    "inherited": {
+      "count": 0,
+      "issues": []
+    },
+    "source-import": {
+      "count": 0,
+      "summary": {
+        "warning_count": 0,
+        "by_code": {}
+      }
+    }
+  },
+  "drift": {
+    "colors": {
+      "#102536": [
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "12_完整版本.svg"
+      ],
+      "#244765": [
+        "01_Python猜数字游戏.svg",
+        "07_人体while循环.svg",
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "10_互动实践.svg",
+        "12_完整版本.svg",
+        "13_学生动手.svg",
+        "14_课堂总结.svg",
+        "15_课后挑战.svg"
+      ],
+      "#52718B": [
+        "01_Python猜数字游戏.svg",
+        "03_课程挑战.svg"
+      ],
+      "#5D7080": [
+        "02_情境导入.svg",
+        "03_课程挑战.svg",
+        "04_旧工具够用吗.svg",
+        "05_while循环概念.svg",
+        "06_循环流程.svg",
+        "07_人体while循环.svg",
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "10_互动实践.svg",
+        "11_调试挑战.svg",
+        "12_完整版本.svg",
+        "13_学生动手.svg",
+        "15_课后挑战.svg"
+      ],
+      "#8FE0B8": [
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "12_完整版本.svg"
+      ],
+      "#AFC8DA": [
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "12_完整版本.svg"
+      ],
+      "#B9D8ED": [
+        "01_Python猜数字游戏.svg",
+        "03_课程挑战.svg",
+        "05_while循环概念.svg",
+        "06_循环流程.svg",
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "10_互动实践.svg",
+        "11_调试挑战.svg",
+        "12_完整版本.svg",
+        "13_学生动手.svg",
+        "15_课后挑战.svg"
+      ],
+      "#C5DEEF": [
+        "02_情境导入.svg"
+      ],
+      "#C9DFEF": [
+        "03_课程挑战.svg",
+        "04_旧工具够用吗.svg",
+        "07_人体while循环.svg",
+        "10_互动实践.svg"
+      ],
+      "#D9F0E6": [
+        "05_while循环概念.svg",
+        "06_循环流程.svg"
+      ],
+      "#E3A82A": [
+        "13_学生动手.svg"
+      ],
+      "#FFF0C5": [
+        "05_while循环概念.svg"
+      ],
+      "#FFFFFF": [
+        "01_Python猜数字游戏.svg",
+        "02_情境导入.svg",
+        "03_课程挑战.svg",
+        "04_旧工具够用吗.svg",
+        "05_while循环概念.svg",
+        "06_循环流程.svg",
+        "07_人体while循环.svg",
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "10_互动实践.svg",
+        "11_调试挑战.svg",
+        "12_完整版本.svg",
+        "13_学生动手.svg",
+        "14_课堂总结.svg",
+        "15_课后挑战.svg"
+      ]
+    },
+    "fonts": {
+      "Arial, sans-serif": [
+        "02_情境导入.svg",
+        "03_课程挑战.svg",
+        "04_旧工具够用吗.svg",
+        "05_while循环概念.svg",
+        "06_循环流程.svg",
+        "07_人体while循环.svg",
+        "08_最小代码.svg",
+        "09_运行前先预测.svg",
+        "10_互动实践.svg",
+        "11_调试挑战.svg",
+        "12_完整版本.svg",
+        "13_学生动手.svg",
+        "14_课堂总结.svg",
+        "15_课后挑战.svg"
+      ]
+    },
+    "sizes": {}
+  },
+  "project_issues": {
+    "template": [],
+    "animation": [],
+    "illustration": [],
+    "communication_trace": [],
+    "pptx_structure": []
+  },
+  "files": [
+    {
+      "file": "01_Python猜数字游戏.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/01_Python猜数字游戏.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Detected 1 paragraph-like line run(s) split across sibling <text> elements (<g id=\"title-block\"> x=184.0, y=254.0..330.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 4,
+        "tspan_elements": 0,
+        "contextual_values": {
+          "colors": [
+            "#244765",
+            "#52718B",
+            "#B9D8ED",
+            "#FFFFFF"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "1bdd52b8e9a20f4494f6ab4669651c87801788bd169a257ae74957001a9ea4d6"
+    },
+    {
+      "file": "02_情境导入.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/02_情境导入.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 7,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#5D7080",
+            "#C5DEEF",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "38f665af96db5d2175aca6ed312d54d0a7c401fb00b95f6a75938e51dd14219b"
+    },
+    {
+      "file": "03_课程挑战.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/03_课程挑战.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 9,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#52718B",
+            "#5D7080",
+            "#B9D8ED",
+            "#C9DFEF",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "1099c496cbdace3c9c1a7979b55e3e44dc0cc6f5d7f73ebbd5aebcc58e4614ee"
+    },
+    {
+      "file": "04_旧工具够用吗.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/04_旧工具够用吗.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 0,
+        "contextual_values": {
+          "colors": [
+            "#5D7080",
+            "#C9DFEF",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "f9cc6d3db552eb5c7fffa5206d856846497f77f3fe8ebb3bc72ca231767a09cd"
+    },
+    {
+      "file": "05_while循环概念.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/05_while循环概念.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"true-state\"> x=828.0, y=212.0..260.0, 2 lines; <g id=\"false-state\"> x=828.0, y=374.0..422.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 8,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#5D7080",
+            "#B9D8ED",
+            "#D9F0E6",
+            "#FFF0C5",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "5631fd68558a830d1a298769fa2d1c453a2a5f7041e4a65ae4e6830f57f1db74"
+    },
+    {
+      "file": "06_循环流程.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/06_循环流程.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 13,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#5D7080",
+            "#B9D8ED",
+            "#D9F0E6",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "03c92c44efdc661a3a6716570a6a673b71f004a3913dfe356004702d61c4602f"
+    },
+    {
+      "file": "07_人体while循环.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/07_人体while循环.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 4,
+        "contextual_values": {
+          "colors": [
+            "#244765",
+            "#5D7080",
+            "#C9DFEF",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "264aa22a2d7e31dd43fe3351b6379bb37f129f5bf16e5ed758473a10354721f6"
+    },
+    {
+      "file": "08_最小代码.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/08_最小代码.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=226.0..306.0, 3 lines; <g id=\"code-console\"> x=82.0, y=394.0..434.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Menlo, Consolas, Courier New, Microsoft YaHei, monospace",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 16,
+        "tspan_elements": 0,
+        "contextual_values": {
+          "colors": [
+            "#102536",
+            "#244765",
+            "#5D7080",
+            "#8FE0B8",
+            "#AFC8DA",
+            "#B9D8ED",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "e6fc4beb98b99167e3888ec380e772088d2c500a300ecb3f649634285d3e46be"
+    },
+    {
+      "file": "09_运行前先预测.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/09_运行前先预测.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=210.0..286.0, 3 lines; <g id=\"code-console\"> x=82.0, y=362.0..400.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Menlo, Consolas, Courier New, Microsoft YaHei, monospace",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 17,
+        "tspan_elements": 0,
+        "contextual_values": {
+          "colors": [
+            "#102536",
+            "#244765",
+            "#5D7080",
+            "#8FE0B8",
+            "#AFC8DA",
+            "#B9D8ED",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "8cedbe7b948f3aaed2880134dabe616406e4133c636a8db3342a5d320db4c8b8"
+    },
+    {
+      "file": "10_互动实践.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/10_互动实践.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 4,
+        "contextual_values": {
+          "colors": [
+            "#244765",
+            "#5D7080",
+            "#B9D8ED",
+            "#C9DFEF",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "129553171ae0f6b07ad5251a40d9b06e22f89b034d567781cdf5c2d3d910ffdc"
+    },
+    {
+      "file": "11_调试挑战.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/11_调试挑战.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 8,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#5D7080",
+            "#B9D8ED",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "b9500d4f4d8355637e2f96a436fa8e0f59e52e321d3990c7b6819d26b8510d80"
+    },
+    {
+      "file": "12_完整版本.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/12_完整版本.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [
+        "Detected 2 paragraph-like line run(s) split across sibling <text> elements (<g id=\"code-console\"> x=82.0, y=204.0..272.0, 3 lines; <g id=\"code-console\"> x=82.0, y=476.0..510.0, 2 lines). If each run is one prose paragraph, combine it into one <text>: keep its first line as direct text and use direct <tspan> children with the parent x and positive relative dy values for later lines. An all-<tspan> form may start with dy=\"0\". Keep semantically independent text frames separate."
+      ],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Menlo, Consolas, Courier New, Microsoft YaHei, monospace",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 21,
+        "tspan_elements": 0,
+        "contextual_values": {
+          "colors": [
+            "#102536",
+            "#244765",
+            "#5D7080",
+            "#8FE0B8",
+            "#AFC8DA",
+            "#B9D8ED",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "aee9c4332b99a9bc3e5059dbf34af40020546293a96e96d0b1c4300ac2f796e8"
+    },
+    {
+      "file": "13_学生动手.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/13_学生动手.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 11,
+        "tspan_elements": 2,
+        "contextual_values": {
+          "colors": [
+            "#244765",
+            "#5D7080",
+            "#B9D8ED",
+            "#E3A82A",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "2c1dc6d8abc72dd65fabdd0f7c0485388de9c6abe762af74ac7ad68e0f55cdad"
+    },
+    {
+      "file": "14_课堂总结.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/14_课堂总结.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 9,
+        "tspan_elements": 2,
+        "contextual_values": {
+          "colors": [
+            "#244765",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "5a9d2b9db0e34fb50075ed622c2f0d76f4cb8b020631bae344801b26b0bd667c"
+    },
+    {
+      "file": "15_课后挑战.svg",
+      "path": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/svg_output/15_课后挑战.svg",
+      "exists": true,
+      "errors": [],
+      "warnings": [],
+      "info": {
+        "viewbox": "0 0 1280 720",
+        "fonts": [
+          "Arial, sans-serif",
+          "Microsoft YaHei, PingFang SC, Arial, sans-serif"
+        ],
+        "text_elements": 8,
+        "tspan_elements": 1,
+        "contextual_values": {
+          "colors": [
+            "#244765",
+            "#5D7080",
+            "#B9D8ED",
+            "#FFFFFF"
+          ],
+          "font_families": [
+            "Arial, sans-serif"
+          ]
+        }
+      },
+      "passed": true,
+      "source_sha256": "db636ff0be73ee44338acc53dae18bfad2dcba540be64d29409954722972ca8f"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" data-pptx-page-role="section">
+  <rect id="background" data-pptx-role="background" x="0" y="0" width="1280" height="720" fill="#18314E"/>
+  <circle id="summary-disc" data-pptx-role="decoration" cx="1158" cy="72" r="210" fill="#244765"/>
+  <g id="header" data-pptx-bounds="64 44 830 78">
+    <text x="64" y="96" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="56" font-weight="700" fill="#FFFFFF">记住这三件事</text>
+  </g>
+  <g id="summary-definition" data-pptx-bounds="64 138 1152 94">
+    <rect x="64" y="138" width="1152" height="94" rx="16" fill="#244765"/>
+    <text x="96" y="196" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFC444">while 循环会在条件为 True 时重复执行一组代码。</text>
+  </g>
+  <g id="summary-one" data-pptx-bounds="64 266 1152 96">
+    <circle cx="112" cy="314" r="34" fill="#FFC444"/>
+    <text x="99" y="328" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">1</text>
+    <text x="176" y="308" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">循环条件决定循环是否继续执行，每次循环前<tspan x="176" dy="44">都会重新判断。</tspan></text>
+  </g>
+  <g id="summary-two" data-pptx-bounds="64 382 1152 96">
+    <circle cx="112" cy="430" r="34" fill="#FFC444"/>
+    <text x="99" y="444" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#18314E">2</text>
+    <text x="176" y="424" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#FFFFFF">循环变量是在循环过程中被更新、并帮助循环<tspan x="176" dy="44">最终停止的变量。</tspan></text>
+  </g>
+  <g id="summary-three" data-pptx-bounds="64 498 1152 96">
+    <circle cx="112" cy="546" r="34" fill="#2B8F67"/>
+    <text x="99" y="560" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#FFFFFF">3</text>
+    <rect x="176" y="504" width="1008" height="76" rx="16" fill="#DCEEFA"/>
+    <text x="206" y="552" font-family="Microsoft YaHei, PingFang SC, Arial, sans-serif" font-size="32" font-weight="700" fill="#18314E">用一句话说明 while 循环何时继续、何时停止。</text>
+  </g>
+  <g id="footer" data-pptx-bounds="1090 660 142 40">
+    <text x="1122" y="692" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#DCEEFA">SLIDE-14</text>
+  </g>
+</svg>

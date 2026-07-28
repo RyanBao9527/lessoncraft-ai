@@ -1,0 +1,11 @@
+{
+  "language": "Python",
+  "topic": "猜数字游戏",
+  "age_range": "10～12 岁",
+  "student_level": "学过变量、input 和 if",
+  "duration_minutes": 90,
+  "core_goal": "理解并使用 while 循环",
+  "teaching_style": "互动实践型",
+  "max_slides": 15,
+  "additional_requirements": "课堂最后完成一个完整小游戏"
+}

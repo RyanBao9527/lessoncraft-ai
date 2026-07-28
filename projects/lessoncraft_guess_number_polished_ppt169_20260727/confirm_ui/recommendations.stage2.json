@@ -1,0 +1,124 @@
+{
+  "stage": "stage2",
+  "lang": "zh",
+  "recommend": {
+    "delivery_purpose": "presentation",
+    "mode": "briefing",
+    "visual_style": "soft-rounded",
+    "image_usage": ["none"]
+  },
+  "page_count": {
+    "value": "15"
+  },
+  "image_notes": {
+    "value": "不使用外部图片或 AI 图片；只用原生可编辑图形、箭头、卡片、代码框和少量语义图标。"
+  },
+  "custom_candidates": {
+    "mode": {
+      "name_zh": "关卡式课堂推进",
+      "behavior_zh": "保持原始 15 页顺序和文字不变，用关卡编号、行动标签和完成状态强化从问题、预测、代码到任务的课堂推进感。"
+    },
+    "visual_style": {
+      "name_zh": "明亮编程游戏 UI",
+      "behavior_zh": "使用模块化 HUD 分区、轻量像素刻度、圆角任务面板和高对比代码控制台；装饰集中在页角与状态标签，主体保持明亮、留白充足、适合投屏。"
+    }
+  },
+  "design_directions": {
+    "selected": 0,
+    "candidates": [
+      {
+        "name_zh": "明亮游戏课堂（推荐）",
+        "note_zh": "继承源课件实际用色，以圆角卡片、任务徽章和清晰代码控制台提升游戏感；活泼但不幼稚。",
+        "visual_style": "soft-rounded",
+        "icons": "tabler-filled",
+        "color": {
+          "name_zh": "深海蓝 × 奖励黄",
+          "palette": {
+            "background": "#F7FBFF",
+            "secondary_bg": "#DCEEFA",
+            "primary": "#18314E",
+            "accent": "#FFC444",
+            "secondary_accent": "#2B8F67",
+            "body_text": "#232931"
+          }
+        },
+        "typography": {
+          "name_zh": "清晰课堂无衬线",
+          "heading": {
+            "cjk": "Microsoft YaHei",
+            "latin": "Arial",
+            "css": "\"Microsoft YaHei\", \"PingFang SC\", Arial, sans-serif"
+          },
+          "body": {
+            "cjk": "Microsoft YaHei",
+            "latin": "Arial",
+            "css": "\"Microsoft YaHei\", \"PingFang SC\", Arial, sans-serif"
+          },
+          "body_size": 32
+        }
+      },
+      {
+        "name_zh": "科技关卡 HUD",
+        "note_zh": "深色技术界面配高亮状态线和细网格，代码与流程更像真实编程控制台。",
+        "visual_style": "dark-tech",
+        "icons": "tabler-outline",
+        "color": {
+          "name_zh": "深蓝控制台",
+          "palette": {
+            "background": "#102A43",
+            "secondary_bg": "#183B56",
+            "primary": "#DCEEFA",
+            "accent": "#38D9A9",
+            "secondary_accent": "#FFC444",
+            "body_text": "#FFFFFF"
+          }
+        },
+        "typography": {
+          "name_zh": "技术无衬线",
+          "heading": {
+            "cjk": "Microsoft YaHei",
+            "latin": "Arial",
+            "css": "\"Microsoft YaHei\", \"PingFang SC\", Arial, sans-serif"
+          },
+          "body": {
+            "cjk": "Microsoft YaHei",
+            "latin": "Arial",
+            "css": "\"Microsoft YaHei\", \"PingFang SC\", Arial, sans-serif"
+          },
+          "body_size": 32
+        }
+      },
+      {
+        "name_zh": "像素挑战模式",
+        "note_zh": "用可编辑像素格、关卡条和块状图标营造小游戏氛围，正文仍保持常规无衬线以确保课堂可读。",
+        "visual_style": "pixel-art",
+        "icons": "chunk-filled",
+        "color": {
+          "name_zh": "复古游戏亮色",
+          "palette": {
+            "background": "#FFF8E7",
+            "secondary_bg": "#DCEEFA",
+            "primary": "#18314E",
+            "accent": "#EC7541",
+            "secondary_accent": "#2B8F67",
+            "body_text": "#232931"
+          }
+        },
+        "typography": {
+          "name_zh": "清晰正文 × 块状标题",
+          "heading": {
+            "cjk": "Microsoft YaHei",
+            "latin": "Arial Black",
+            "css": "\"Microsoft YaHei\", \"PingFang SC\", \"Arial Black\", sans-serif"
+          },
+          "body": {
+            "cjk": "Microsoft YaHei",
+            "latin": "Arial",
+            "css": "\"Microsoft YaHei\", \"PingFang SC\", Arial, sans-serif"
+          },
+          "body_size": 32
+        }
+      }
+    ]
+  }
+}

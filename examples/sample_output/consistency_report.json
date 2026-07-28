@@ -1,0 +1,146 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "objective_coverage",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "knowledge_coverage",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "knowledge_scope",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "teaching_order",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "duration_total",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "step_duration_breakdown",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "presentation_time_budget",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "terminology_consistency",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "code_example_consistency",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "lesson_slide_mapping",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "activity_slide_binding",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "slide_objective_subset",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "student_action_consistency",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "exercise_objective_mapping",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "exercise_delivery",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "unknown_slide_knowledge",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "unknown_lesson_content",
+      "status": "pass",
+      "scope": "core",
+      "issues": []
+    },
+    {
+      "name": "slide_interaction_rhythm",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "slide_text_only_run",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "slide_information_load",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "lesson_plan_conciseness",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    },
+    {
+      "name": "speaker_notes_conciseness",
+      "status": "pass",
+      "scope": "execution",
+      "issues": []
+    }
+  ],
+  "blocking_issues": [],
+  "warnings": [],
+  "summary": {
+    "core_fact_status": "pass",
+    "execution_alignment_status": "pass",
+    "passed_checks": 22,
+    "warning_checks": 0,
+    "failed_checks": 0
+  }
+}

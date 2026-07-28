@@ -1,0 +1,99 @@
+{
+  "source": "/Users/baoshuai/Documents/少儿编程教学包生成 Skill/lessoncraft-ai/projects/lessoncraft_guess_number_polished_ppt169_20260727/sources/guess-number-slides_2.pptx",
+  "slide_count": 15,
+  "canvas": {
+    "width_px": 1280,
+    "height_px": 720,
+    "aspect": 1.7777
+  },
+  "theme": {
+    "palette": {
+      "background": "#FFFFFF",
+      "background_alt": "#EEECE1",
+      "text": "#000000",
+      "text_alt": "#1F497D",
+      "hyperlink": "#0000FF",
+      "accent1": "#4F81BD",
+      "accent2": "#C0504D",
+      "accent3": "#9BBB59",
+      "accent4": "#8064A2",
+      "accent5": "#4BACC6",
+      "accent6": "#F79646",
+      "primary": "#4F81BD"
+    },
+    "fonts": {
+      "title": {
+        "latin": "Calibri"
+      },
+      "body": {
+        "latin": "Calibri"
+      }
+    },
+    "sizes": {
+      "title": 44.0,
+      "body": 32.0,
+      "body_levels": [
+        32.0,
+        28.0,
+        24.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ]
+    }
+  },
+  "observed": {
+    "fonts": {
+      "latin": [
+        {
+          "value": "Microsoft YaHei",
+          "count": 130
+        },
+        {
+          "value": "Menlo",
+          "count": 25
+        }
+      ],
+      "ea": []
+    },
+    "sizes_pt": [],
+    "colors": [
+      {
+        "value": "#18314E",
+        "count": 47
+      },
+      {
+        "value": "#FFFFFF",
+        "count": 32
+      },
+      {
+        "value": "#232931",
+        "count": 31
+      },
+      {
+        "value": "#606A76",
+        "count": 24
+      },
+      {
+        "value": "#2B8F67",
+        "count": 23
+      },
+      {
+        "value": "#FFC444",
+        "count": 23
+      },
+      {
+        "value": "#DCEEFA",
+        "count": 21
+      },
+      {
+        "value": "#EC7541",
+        "count": 17
+      }
+    ]
+  },
+  "layout_sizes_pt": []
+}
